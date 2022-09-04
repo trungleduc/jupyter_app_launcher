@@ -1,0 +1,58 @@
+{
+    "title": "I Launcher configuration",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "sourceCode": {
+            "type": "string"
+        },
+        "cwd": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "notebook",
+                "notebook-grid",
+                "notebook-voila",
+                "markdown",
+                "local-server",
+                "url"
+            ]
+        },
+        "catalog": {
+            "type": "string"
+        },
+        "args": {
+            "anyOf": [
+                {
+                    "type": "object"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "source",
+        "type"
+    ],
+    "additionalProperties": false,
+    "type": "object"
+}

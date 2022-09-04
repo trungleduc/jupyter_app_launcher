@@ -1,0 +1,48 @@
+- title: Dashboard example
+  description: Example of opening a notebook in dashboard mode without Voila
+  source: ../../samples/sample.ipynb 
+  cwd: ../../samples
+  type: notebook-grid
+
+- title: Notebook example
+  description: Example of opening a notebook in dashboard mode without Voila
+  source: ../../samples/sample.ipynb 
+  cwd: ../../samples
+  type: notebook
+  catalog: Another catalog
+
+- title: Voila example
+  description: Example of opening a notebook in dashboard mode with Voila
+  source: ../../samples/sample.ipynb 
+  cwd: ../../samples
+  type: notebook-voila
+  args:
+    theme: dark
+  catalog: Another catalog
+
+- title: URL example
+  description: Example of opening a URL in a tab
+  source: https://jupyterlab.readthedocs.io/en/stable/
+  type: url
+  catalog: Another catalog
+  args:
+    sandbox: [ 'allow-same-origin', 'allow-scripts', 'allow-downloads', 'allow-modals', 'allow-popups']
+
+- title: Markdown example
+  description: Example of opening a Markdown file in a tab
+  source: ../../samples/sample.md 
+  type: markdown
+  catalog: Another catalog
+
+- title: Streamlit example
+  description: Example of opening a streamlit app 
+  source: http://localhost:$PORT/
+  cwd: ./
+  type: local-server
+  args:
+    - streamlit
+    - run
+    - st_app.py
+    - --server.headless=true
+    - --server.port=$PORT
+  catalog: Another catalog

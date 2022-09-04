@@ -2,9 +2,9 @@
 # this environment may also be used locally on Linux/MacOS/Windows, e.g.
 #
 #   conda env update --file binder/environment.yml
-#   conda activate jupyter-app-launcher-demo
+#   conda activate jupyterlab-app-launcher-demo
 #
-name: jupyter-app-launcher-demo
+name: jupyterlab-app-launcher-demo
 
 channels:
   - conda-forge
@@ -17,5 +17,11 @@ dependencies:
   - nodejs >=14,<15
   - pip
   - wheel
-  # additional packages for demos
-  # - ipywidgets
+  - ipywidgets
+  - ipyflex
+  - voila
+  - voila-gridstack
+  - ipyleaflet
+  - streamlit=1.11.1
+  - pandas
+  - numpy
