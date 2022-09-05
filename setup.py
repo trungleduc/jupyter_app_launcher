@@ -102,7 +102,7 @@ setup_args = dict(
     ],
     entry_points={
         'console_scripts': [
-            'jupyter-app_launcher=jupyterlab_app_launcher.script:build_lite'
+            'jupyter-app_launcher=jupyter_app_launcher.script:build_lite'
         ]
     },
 )

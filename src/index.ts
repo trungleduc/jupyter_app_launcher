@@ -22,7 +22,7 @@ import { PromiseDelegate } from '@lumino/coreutils';
  * Initialization data for the jupyter_app_launcher extension.
  */
 const plugin: JupyterFrontEndPlugin<IAppTracker> = {
-  id: 'jupyterlab_app_launcher:plugin',
+  id: 'jupyter_app_launcher:plugin',
   autoStart: true,
   requires: [ILauncher, IPanelFactoryManager],
   optional: [IRunningSessionManagers],

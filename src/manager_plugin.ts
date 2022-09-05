@@ -16,7 +16,7 @@ import { URLFactory } from './factories/url/url_factory';
 import { MarkdownFactory } from './factories/markdown/markdown_factory';
 
 export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
-  id: 'jupyterlab_app_launcher:panel-factory-manager',
+  id: 'jupyter_app_launcher:panel-factory-manager',
   autoStart: true,
   requires: [
     IRenderMimeRegistry,
