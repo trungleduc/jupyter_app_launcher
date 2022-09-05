@@ -11,6 +11,7 @@ include *.config.js
 include yarn.lock
 
 graft jupyter_app_launcher/labextension
+graft jupyter_app_launcher/schema
 
 # Javascript files
 graft src
