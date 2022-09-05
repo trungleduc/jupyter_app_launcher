@@ -124,7 +124,6 @@ jlpm
 jlpm test
 ```
 
-
 ### Packaging the extension
 
 See [RELEASE](RELEASE.md)
