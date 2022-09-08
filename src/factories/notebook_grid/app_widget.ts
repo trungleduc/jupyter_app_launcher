@@ -66,14 +66,16 @@ export class AppWidget extends Panel {
     }
     const options: { [key: string]: any } = {
       id,
-      autoPosition: true
+      autoPosition: true,
+      noMove: true,
+      noResize: true,
+      locked: true
     };
     if (info && info.row !== null && info.col !== null) {
       options.x = info.col;
       options.y = info.row;
       options.width = info.width;
       options.height = info.height;
-      options.locked = info.locked;
       options.autoPosition = false;
     }
 
@@ -100,7 +102,9 @@ export class AppWidget extends Panel {
         y: info.row,
         w: info.width,
         h: info.height,
-        locked: info.locked
+        noMove: true,
+        noResize: true,
+        locked: true
       };
     }
     this._grid.update(item, option);
