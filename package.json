@@ -61,7 +61,7 @@
     "@jupyterlab/launcher": "^3.2.9",
     "@jupyterlab/markdownviewer": "^3.2.9",
     "@jupyterlab/running": "^3.2.9",
-    "gridstack": "^5.0.0"
+    "gridstack": "^5.0.0 || ^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -112,7 +112,7 @@
     "outputDir": "jupyter_app_launcher/labextension",
     "sharedPackages": {
       "gridstack": {
-        "bundled": false,
+        "bundled": true,
         "singleton": true
       }
     }
