@@ -1,6 +1,0 @@
-#!/bin/bash
-
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-export JUPYTER_APP_LAUNCHER_PATH=$SCRIPT_DIR"/jupyter_app_launcher" 
-
-exec "$@"
