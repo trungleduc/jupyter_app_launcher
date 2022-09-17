@@ -105,7 +105,7 @@ async function activate(
     if (runningManager) {
       let currentRunning: RunningLauncherApp[] = [];
       runningManager.add({
-        name: 'Laucher application',
+        name: 'Launcher application',
         running: () => {
           currentRunning = widgetTracker.runningInstance.map(
             instance =>

@@ -73,7 +73,7 @@ def get_free_port() -> int:
     return soc.getsockname()[1]
 
 
-def check_url(url: str, timeout=100) -> bool:
+def check_url(url: str, timeout=120) -> bool:
     rate = 0.5
     n_check = timeout / rate
     check = 0
