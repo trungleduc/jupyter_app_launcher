@@ -33,7 +33,7 @@ You can read the documentation following this link: https://jupyter-app-launcher
 You can install using `pip`:
 
 ```bash
-pip install jupyter_app_launcher
+pip install jupyter-app-launcher
 ```
 
 Or using `conda`:
