@@ -6,7 +6,6 @@ __all__ = ['__version__']
 
 def _fetchVersion():
     HERE = Path(__file__).parent.resolve()
-    print('###########',HERE)
     for settings in HERE.rglob('package.json'):
         try:
             with settings.open() as f:

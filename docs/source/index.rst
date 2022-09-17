@@ -1,15 +1,18 @@
 
-jupyter_app_launcher - A JupyterLab extension to create custom launcher entries. 
+jupyter_app_launcher 
 =================================================================================
+
+   Custom launcher entries for JupyterLab.
 
 Version: |release|
 
-**jupyter_app_launcher** aims to help users customize the JupyterLab launcher with a simple YAML file. Users can add custom entries entry to the launcher in order to:
+**jupyter_app_launcher** helps users customize the JupyterLab launcher with a simple YAML file. Users can add custom entries to the launcher to:
 
-- Create a predefined notebook or markdown file.
+- Open a predefined notebook or markdown file.
 - Render a notebook in dashboard mode
 - Open a notebook with Voila  
-- Open a local/remote URL.
+- Start a local process and open the defined URL.
+- Open a remote URL.
 
 .. figure:: images/launcher-app.gif
 
@@ -26,36 +29,30 @@ or with conda::
 
     conda install -c conda-forge  jupyter_app_launcher
 
-**jupyter_app_launcher** works with JupyterLab>=3.1
+Check your installation with::
+
+    jupyter serverextension list
+    jupyter labextension list
+
+**jupyter_app_launcher** works with **JupyterLab**>=3.1
 
 Contents
 --------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Installation and usage
 
-   installing
    usage
 
 .. toctree::
-   :maxdepth: 1
-
-   examples/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Changelog
-   
-   changelog
-
-
-.. toctree::
    :maxdepth: 2
-   :caption: Development
 
    develop-install
 
+.. toctree::
+   :maxdepth: 1
+   
+   changelog
 
 .. links
 
