@@ -1,6 +1,6 @@
 <h1 align="center">jupyter_app_launcher</h1>
 
-[![Github Actions Status](https://github.com/trungleduc/jupyter_app_launcher/workflows/Build/badge.svg)](https://github.com/trungleduc/jupyter_app_launcher/actions/workflows/build.yml) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trungleduc/jupyter_app_launcher/main?urlpath=lab)
+[![Github Actions Status](https://github.com/trungleduc/jupyter_app_launcher/workflows/Build/badge.svg)](https://github.com/trungleduc/jupyter_app_launcher/actions/workflows/build.yml) [![Documentation Status](https://readthedocs.org/projects/jupyter-app-launcher/badge/?version=latest)](https://jupyter-app-launcher.readthedocs.io/en/latest/?badge=latest) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trungleduc/jupyter_app_launcher/main?urlpath=lab) [![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://trungleduc.github.io/jupyter_app_launcher/lab/index.html) [![GitHub license](https://badgen.net/github/license/trungleduc/jupyter_app_launcher)](https://github.com/trungleduc/jupyter_app_launcher/blob/master/LICENSE) [![PyPI version](https://badge.fury.io/py/jupyter_app_launcher.svg)](https://badge.fury.io/py/jupyter_app_launcher) [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_app_launcher.svg)](https://anaconda.org/conda-forge/jupyter_app_launcher)
 
 <h2 align="center"> A JupyterLab extension to create custom launcher entries </h2>
 
@@ -18,9 +18,15 @@
 
 You can try it online by clicking on this badge:
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trungleduc/jupyter_app_launcher/main?urlpath=lab)
+
+Or you can run it directly in your browser with `JupyterLite`:
+
+[![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://trungleduc.github.io/jupyter_app_launcher/lab/index.html)
+
 ## Documentation
 
-You can read the documentation following this link:
+You can read the documentation following this link: https://jupyter-app-launcher.readthedocs.io/
 
 ## Installation
 
@@ -66,7 +72,7 @@ conda install -c conda-forge  jupyter_app_launcher
 
 ## Contributing
 
-See [Contributing]()
+See [Contributing](https://jupyter-app-launcher.readthedocs.io/en/latest/develop-install.html)
 
 ## Packaging the extension
 
