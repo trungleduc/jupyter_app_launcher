@@ -1,0 +1,8 @@
+type: sphinx
+python:
+  version: 3.9
+  pip_install: true
+  extra_requirements:
+    - docs
+conda:
+  file: docs/environment.yml

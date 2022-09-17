@@ -228,7 +228,7 @@ This launcher entry will open the predefined URL in a new panel of JupyterLab by
 Running subprocesses
 ======================================================
 
-In the case of ``voila`` or ``local-server`` launcher entry, *jupyter_app_launcher* will start the corresponding process in a subprocess. Users can keep track and shut down running subprocesses by using the **Launcher Application** section in the running panel of *JupyterLab*
+In the case of ``notebook-voila`` or ``local-server`` launcher entry, *jupyter_app_launcher* will start the corresponding process in a subprocess. Users can keep track and shut down running subprocesses by using the **Launcher Application** section in the running panel of *JupyterLab*
 
 .. figure:: images/running.png
 
