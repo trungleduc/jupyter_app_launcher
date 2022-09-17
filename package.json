@@ -112,7 +112,7 @@
     "outputDir": "jupyter_app_launcher/labextension",
     "sharedPackages": {
       "gridstack": {
-        "bundled": true,
+        "bundled": false,
         "singleton": true
       }
     }

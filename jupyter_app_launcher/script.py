@@ -16,7 +16,13 @@ def build_lite():
             raise ArgumentError('Missing arguments')
         cwd = os.getcwd()
         source = create_abs_path(argv[2], cwd)
-        config = parse_config(source)
+        raw_config = parse_config(source)
+        config = [
+            x
+            for x in raw_config
+            if x['type'] not in ['notebook-voila', 'local-server']
+        ]
+
         dest = create_abs_path(argv[3], cwd)
         overrides = os.path.join(dest, 'overrides.json')
         if os.path.exists(overrides):
