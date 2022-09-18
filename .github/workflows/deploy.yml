@@ -24,7 +24,9 @@ jobs:
           python -m pip install .
       - name: Build the JupyterLite site
         run: |
-          mkdir -p ./lite
+          mkdir -p ./lite/files
+          cp ./samples/data.json /lite/files/
+          cp ./samples/ticker2.json /lite/files/
           jupyter app_launcher build ./binder/jupyter_app_launcher/ ./lite
           cd lite
           jupyter lite build

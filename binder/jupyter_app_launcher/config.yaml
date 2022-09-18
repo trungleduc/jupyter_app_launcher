@@ -1,3 +1,10 @@
+- title: NVIDIA
+  description: Nvidia stock dashboard
+  source: ../../samples/stock.ipynb 
+  cwd: ../../samples
+  type: notebook-grid
+  catalog: Stock dashboard
+
 - title: Dashboard example
   description: Example of opening a notebook in dashboard mode without Voila
   source: ../../samples/sample.ipynb 
