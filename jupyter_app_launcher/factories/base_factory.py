@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Any, Dict, Literal
+from typing import Any, Dict
 
 
 class BaseFactory(ABC):
@@ -11,9 +11,7 @@ class BaseFactory(ABC):
     @abstractmethod
     def name(
         self,
-    ) -> Literal[
-        'notebook', 'notebook-grid', 'notebook-voila', 'markdown', 'url'
-    ]:
+    ) -> str:
         pass
 
     def get_type(self) -> str:
