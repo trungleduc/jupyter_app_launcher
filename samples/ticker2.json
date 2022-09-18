@@ -1,0 +1,157 @@
+{
+  "global": {
+    "tabSetEnableClose": true,
+    "tabSetTabLocation": "bottom"
+  },
+  "borders": [],
+  "layout": {
+    "type": "row",
+    "id": "#1",
+    "children": [
+      {
+        "type": "tabset",
+        "id": "#2",
+        "children": [
+          {
+            "type": "tab",
+            "id": "#3",
+            "name": "OVERVIEW",
+            "component": "sub",
+            "config": {
+              "model": {
+                "global": {
+                  "splitterSize": 8,
+                  "tabSetEnableClose": true
+                },
+                "borders": [],
+                "layout": {
+                  "type": "row",
+                  "id": "#1",
+                  "children": [
+                    {
+                      "type": "row",
+                      "id": "#0feca7c7-cae8-4092-a88c-062aa6ba9fc9",
+                      "children": [
+                        {
+                          "type": "tabset",
+                          "id": "#3d3408d4-23ab-4890-96cb-68ca893ce33f",
+                          "weight": 9.224533108444442,
+                          "enableTabStrip": false,
+                          "children": [
+                            {
+                              "type": "tab",
+                              "id": "#a87b3280-3124-45b1-b27d-b2013e18d909",
+                              "name": "info",
+                              "component": "Widget",
+                              "config": {
+                                "layoutID": "#3"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "tabset",
+                          "id": "#d133afd2-958b-4444-a6a0-1f30eb0bc540",
+                          "weight": 22.432387331898983,
+                          "enableTabStrip": true,
+                          "children": [
+                            {
+                              "type": "tab",
+                              "id": "#b201d7b9-162a-4c5e-8cd7-c22cf588d908",
+                              "name": "price",
+                              "component": "Widget",
+                              "config": {
+                                "layoutID": "#3"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "row",
+                          "id": "#52547138-949a-449f-9db3-c6e9e8f2009f",
+                          "weight": 18.343079559656577,
+                          "children": [
+                            {
+                              "type": "tabset",
+                              "id": "#7bff3504-78f3-40c2-ba40-3e16277e6027",
+                              "weight": 50,
+                              "enableTabStrip": false,
+                              "children": [
+                                {
+                                  "type": "tab",
+                                  "id": "#684d775f-0cb7-482e-ac6c-9bf2e1131ad0",
+                                  "name": "history",
+                                  "component": "Widget",
+                                  "config": {
+                                    "layoutID": "#3"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "tabset",
+                              "id": "#db726913-cfca-494c-832d-067d919bdb39",
+                              "weight": 50,
+                              "children": [
+                                {
+                                  "type": "tab",
+                                  "id": "#0f0dadf9-9656-4acc-bf36-0df239c310da",
+                                  "name": "summary",
+                                  "component": "Widget",
+                                  "config": {
+                                    "layoutID": "#3"
+                                  }
+                                },
+                                {
+                                  "type": "tab",
+                                  "id": "#48f3092f-0f69-481d-9ad9-b0b291c1f87c",
+                                  "name": "balance_sheet",
+                                  "component": "Widget",
+                                  "config": {
+                                    "layoutID": "#3"
+                                  }
+                                },
+                                {
+                                  "type": "tab",
+                                  "id": "#5b4669da-c580-4003-b3d0-1885b4f6c1a0",
+                                  "name": "analysis",
+                                  "component": "Widget",
+                                  "config": {
+                                    "layoutID": "#3"
+                                  }
+                                }
+                              ],
+                              "active": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tabset",
+                      "id": "#00d98f6c-14c5-4771-ade4-72f2ec80f3d6",
+                      "weight": 33.333333333333336,
+                      "enableTabStrip": false,
+                      "children": [
+                        {
+                          "type": "tab",
+                          "id": "#1df6b447-b834-4c28-8a34-8b73a0c18492",
+                          "name": "news",
+                          "component": "Widget",
+                          "config": {
+                            "layoutID": "#3"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "active": true
+      }
+    ]
+  }
+}
