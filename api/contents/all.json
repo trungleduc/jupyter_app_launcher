@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2022-09-18T23:30:14.950888Z",
+      "format": null,
+      "last_modified": "2022-09-18T23:30:13.198895Z",
+      "mimetype": "application/json",
+      "name": "ticker2.json",
+      "path": "ticker2.json",
+      "size": 6009,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-09-18T23:30:14.950888Z",
+      "format": null,
+      "last_modified": "2022-09-18T23:30:13.198895Z",
+      "mimetype": "application/json",
+      "name": "data.json",
+      "path": "data.json",
+      "size": 61060,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2022-09-18T23:30:14.950888Z",
+  "format": "json",
+  "last_modified": "2022-09-18T23:30:14.950888Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
