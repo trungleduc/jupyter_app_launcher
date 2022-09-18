@@ -181,10 +181,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "META",
-            "NVDA"
-          ]
+          "relatedTickers": ["META", "NVDA"]
         },
         {
           "uuid": "4ea31542-3f3e-3eb0-a94a-547d0a792e30",
@@ -209,10 +206,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "NVDA",
-            "MRAI"
-          ]
+          "relatedTickers": ["NVDA", "MRAI"]
         },
         {
           "uuid": "8ec835a7-2932-4bae-998e-a300ff650646",
@@ -237,14 +231,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "GOOG",
-            "GOOGL",
-            "AMZN",
-            "NVDA",
-            "AAPL",
-            "META"
-          ]
+          "relatedTickers": ["GOOG", "GOOGL", "AMZN", "NVDA", "AAPL", "META"]
         },
         {
           "uuid": "82dce382-42c9-36dd-9f00-f50533ad3b12",
@@ -269,10 +256,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "NVDA",
-            "INTC"
-          ]
+          "relatedTickers": ["NVDA", "INTC"]
         },
         {
           "uuid": "4ded5467-55d9-3db2-b84d-ad5ff3ef11e7",
@@ -297,11 +281,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "PEGA",
-            "NVDA",
-            "RGEN"
-          ]
+          "relatedTickers": ["PEGA", "NVDA", "RGEN"]
         },
         {
           "uuid": "fba4bd6a-6a01-3d1a-b0e4-3c489d4b3339",
@@ -326,9 +306,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "NVDA"
-          ]
+          "relatedTickers": ["NVDA"]
         },
         {
           "uuid": "985a6956-32ee-3fec-bf5f-b5af689da5f8",
@@ -386,10 +364,7 @@
               }
             ]
           },
-          "relatedTickers": [
-            "NVDA",
-            "COMP"
-          ]
+          "relatedTickers": ["NVDA", "COMP"]
         }
       ]
     },
