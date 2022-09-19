@@ -20,7 +20,7 @@ jobs:
           python-version: 3.9
       - name: Install the dependencies
         run: |
-          python -m pip install -U pip setuptools jupyterlab~=3.3 jupyterlite "ipywidgets<8" ipyleaflet ipyflex plotly ipyvuetify pandas
+          python -m pip install -U pip setuptools jupyterlab~=3.3 jupyterlite "ipywidgets==7.7.2" ipyleaflet ipyflex plotly "ipyvuetify==1.8.2" "ipyvue==1.7.0" pandas
           python -m pip install .
       - name: Build the JupyterLite site
         run: |
