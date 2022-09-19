@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2022-09-19T06:35:44.407615Z",
+      "created": "2022-09-19T06:46:29.199685Z",
       "format": null,
-      "last_modified": "2022-09-19T06:35:42.083642Z",
+      "last_modified": "2022-09-19T06:46:26.831666Z",
       "mimetype": "application/json",
       "name": "ticker2.json",
       "path": "ticker2.json",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2022-09-19T06:35:44.407615Z",
+      "created": "2022-09-19T06:46:29.199685Z",
       "format": null,
-      "last_modified": "2022-09-19T06:35:42.079642Z",
+      "last_modified": "2022-09-19T06:46:26.827666Z",
       "mimetype": "application/json",
       "name": "data.json",
       "path": "data.json",
@@ -25,9 +25,9 @@
       "writable": true
     }
   ],
-  "created": "2022-09-19T06:35:44.407615Z",
+  "created": "2022-09-19T06:46:29.199685Z",
   "format": "json",
-  "last_modified": "2022-09-19T06:35:44.407615Z",
+  "last_modified": "2022-09-19T06:46:29.199685Z",
   "mimetype": null,
   "name": "",
   "path": "",
