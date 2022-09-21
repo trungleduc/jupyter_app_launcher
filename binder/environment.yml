@@ -25,3 +25,6 @@ dependencies:
   - streamlit=1.11.1
   - pandas
   - numpy
+  - cosapp
+  - plotly
+  - ipyvuetify
