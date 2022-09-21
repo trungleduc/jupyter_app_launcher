@@ -1,0 +1,104 @@
+{
+  "global": {
+    "tabSetEnableClose": true,
+    "tabSetEnableTabStrip": false,
+    "tabSetTabLocation": "bottom"
+  },
+  "borders": [],
+  "layout": {
+    "type": "row",
+    "id": "#1",
+    "children": [
+      {
+        "type": "tabset",
+        "id": "#2",
+        "children": [
+          {
+            "type": "tab",
+            "id": "#3",
+            "name": "New section ",
+            "component": "sub",
+            "config": {
+              "model": {
+                "global": {
+                  "splitterSize": 8,
+                  "tabSetEnableClose": true,
+                  "tabSetEnableTabStrip": false
+                },
+                "borders": [],
+                "layout": {
+                  "type": "row",
+                  "id": "#1",
+                  "children": [
+                    {
+                      "type": "tabset",
+                      "id": "#140b6ce8-1704-417e-bc7f-af915f21cb6c",
+                      "weight": 25,
+                      "enableTabStrip": true,
+                      "children": [
+                        {
+                          "type": "tab",
+                          "id": "#a2486ec0-c7e4-44ee-95bc-f59bf5affb48",
+                          "name": "Control",
+                          "component": "Widget",
+                          "config": { "layoutID": "#3" }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tabset",
+                      "id": "#69b88532-8a8f-49b9-8924-3f16ae1f0832",
+                      "weight": 25,
+                      "enableTabStrip": true,
+                      "children": [
+                        {
+                          "type": "tab",
+                          "id": "#3f7e8d06-22d7-4e42-b82d-73024f1f02ff",
+                          "name": "Moment",
+                          "component": "Widget",
+                          "config": { "layoutID": "#3" }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tabset",
+                      "id": "#77e01359-a6f3-4103-bf06-f0ab91602d31",
+                      "weight": 25,
+                      "enableTabStrip": true,
+                      "children": [
+                        {
+                          "type": "tab",
+                          "id": "#715363cc-70df-4e36-a619-828373dec702",
+                          "name": "Deflection",
+                          "component": "Widget",
+                          "config": { "layoutID": "#3" }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tabset",
+                      "id": "#6846128e-5c17-436f-89e7-106543ae0710",
+                      "weight": 25,
+                      "enableTabStrip": true,
+                      "children": [
+                        {
+                          "type": "tab",
+                          "id": "#46e7536d-9b8e-4b48-b525-cbf9fcf14148",
+                          "name": "Shear forces",
+                          "component": "Widget",
+                          "config": { "layoutID": "#3" }
+                        }
+                      ],
+                      "active": true
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "active": true
+      }
+    ]
+  }
+}

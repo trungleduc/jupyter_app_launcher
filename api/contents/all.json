@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2022-09-19T06:46:29.199685Z",
+      "created": "2022-09-21T10:14:58.566294Z",
       "format": null,
-      "last_modified": "2022-09-19T06:46:26.831666Z",
+      "last_modified": "2022-09-21T10:14:56.414156Z",
       "mimetype": "application/json",
       "name": "ticker2.json",
       "path": "ticker2.json",
@@ -14,9 +14,21 @@
     },
     {
       "content": null,
-      "created": "2022-09-19T06:46:29.199685Z",
+      "created": "2022-09-21T10:14:58.566294Z",
       "format": null,
-      "last_modified": "2022-09-19T06:46:26.827666Z",
+      "last_modified": "2022-09-21T10:14:56.414156Z",
+      "mimetype": "application/json",
+      "name": "beam.json",
+      "path": "beam.json",
+      "size": 3422,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-09-21T10:14:58.566294Z",
+      "format": null,
+      "last_modified": "2022-09-21T10:14:56.410156Z",
       "mimetype": "application/json",
       "name": "data.json",
       "path": "data.json",
@@ -25,9 +37,9 @@
       "writable": true
     }
   ],
-  "created": "2022-09-19T06:46:29.199685Z",
+  "created": "2022-09-21T10:14:58.566294Z",
   "format": "json",
-  "last_modified": "2022-09-19T06:46:29.199685Z",
+  "last_modified": "2022-09-21T10:14:58.566294Z",
   "mimetype": null,
   "name": "",
   "path": "",
