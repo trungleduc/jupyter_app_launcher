@@ -70,9 +70,7 @@ setup_args = dict(
         'jupyter_server>=1.6,<2',
         'pyyaml',
         'jupyter-server-proxy',
-        'jsonschema',
-        'voila>=0.3.0',
-        'voila-gridstack>=0.3.0'
+        'jsonschema'
     ],
     extras_require={
         'test': [
