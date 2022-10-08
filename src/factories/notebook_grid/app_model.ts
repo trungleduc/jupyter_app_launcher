@@ -18,6 +18,7 @@ import { IObservableUndoableList } from '@jupyterlab/observables';
 import { OutputAreaModel, SimplifiedOutputArea } from '@jupyterlab/outputarea';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { ServiceManager } from '@jupyterlab/services';
+import { IExecuteReplyMsg } from '@jupyterlab/services/lib/kernel/messages';
 
 import { DashboardCellView, IAppModel } from '../../token';
 import {
@@ -143,12 +144,17 @@ export class AppModel implements IAppModel {
   public async executeCell(
     cell: ICellModel,
     output: SimplifiedOutputArea
-  ): Promise<void> {
+  ): Promise<IExecuteReplyMsg | undefined> {
     if (cell.type !== 'code') {
       return;
     }
     const source = cell.value.text;
-    SimplifiedOutputArea.execute(source, output, this._context.sessionContext);
+    const rep = await SimplifiedOutputArea.execute(
+      source,
+      output,
+      this._context.sessionContext
+    );
+    return rep;
   }
 
   private _notebook: nbformat.INotebookContent;
