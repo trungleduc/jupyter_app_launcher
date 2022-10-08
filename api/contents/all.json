@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2022-10-08T20:32:36.287328Z",
+      "created": "2022-10-08T21:02:39.655454Z",
       "format": null,
-      "last_modified": "2022-10-08T20:32:33.171315Z",
+      "last_modified": "2022-10-08T21:02:37.179434Z",
       "mimetype": "application/json",
       "name": "beam.json",
       "path": "beam.json",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2022-10-08T20:32:36.291328Z",
+      "created": "2022-10-08T21:02:39.655454Z",
       "format": null,
-      "last_modified": "2022-10-08T20:32:33.167315Z",
+      "last_modified": "2022-10-08T21:02:37.179434Z",
       "mimetype": "application/json",
       "name": "ticker2.json",
       "path": "ticker2.json",
@@ -26,9 +26,9 @@
     },
     {
       "content": null,
-      "created": "2022-10-08T20:32:36.287328Z",
+      "created": "2022-10-08T21:02:39.655454Z",
       "format": null,
-      "last_modified": "2022-10-08T20:32:33.167315Z",
+      "last_modified": "2022-10-08T21:02:37.179434Z",
       "mimetype": "application/json",
       "name": "data.json",
       "path": "data.json",
@@ -37,9 +37,9 @@
       "writable": true
     }
   ],
-  "created": "2022-10-08T20:32:36.291328Z",
+  "created": "2022-10-08T21:02:39.655454Z",
   "format": "json",
-  "last_modified": "2022-10-08T20:32:36.291328Z",
+  "last_modified": "2022-10-08T21:02:39.655454Z",
   "mimetype": null,
   "name": "",
   "path": "",
