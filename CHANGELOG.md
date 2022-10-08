@@ -2,6 +2,26 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.3
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.2...6dff12cf495574b1881ba93599d94884054cdff8))
+
+### Enhancements made
+
+- Improve `notebook-grid` dashboard. [#8](https://github.com/trungleduc/jupyter_app_launcher/pull/8) ([@trungleduc](https://github.com/trungleduc))
+
+### Documentation improvements
+
+- Add stock dashboard example [#6](https://github.com/trungleduc/jupyter_app_launcher/pull/6) ([@trungleduc](https://github.com/trungleduc))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-09-18&to=2022-10-08&type=c))
+
+[@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2022-09-18..2022-10-08&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-09-18..2022-10-08&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.2
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.1...126be69e271b681c370713ecb8ac87e05eb323c2))
@@ -15,8 +35,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-09-17&to=2022-09-18&type=c))
 
 [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-09-17..2022-09-18&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.1
 
