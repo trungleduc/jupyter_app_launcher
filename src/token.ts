@@ -1,3 +1,4 @@
+import { IExecuteReplyMsg } from '@jupyterlab/services/lib/kernel/messages';
 import { IWidgetTracker } from '@jupyterlab/apputils';
 import { ICellModel } from '@jupyterlab/cells';
 import { Context } from '@jupyterlab/docregistry';
@@ -24,7 +25,10 @@ export interface IAppModel extends IDisposable {
   rendermime: IRenderMimeRegistry;
   initialize(): Promise<void>;
   createCell(cellModel: ICellModel): GridStackItem;
-  executeCell(cell: ICellModel, output: SimplifiedOutputArea): Promise<void>;
+  executeCell(
+    cell: ICellModel,
+    output: SimplifiedOutputArea
+  ): Promise<IExecuteReplyMsg | undefined>;
 }
 
 export interface IKernelExecutor extends IDisposable {
@@ -63,27 +67,27 @@ export type DashboardCellView = {
   /**
    * If cell output+widget are visible in the layout.
    */
-  hidden: boolean;
+  hidden?: boolean;
   /**
    * Logical row position.
    */
-  row: number;
+  row?: number;
   /**
    * Logical column position.
    */
-  col: number;
+  col?: number;
   /**
    * Logical width.
    */
-  width: number;
+  width?: number;
   /**
    * Logical height.
    */
-  height: number;
+  height?: number;
   /**
    * Lock item.
    */
-  locked: boolean;
+  locked?: boolean;
 };
 
 /**

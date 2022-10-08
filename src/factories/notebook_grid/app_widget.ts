@@ -16,10 +16,19 @@ export class AppWidget extends Panel {
     this.title.label = options.label;
     this.title.closable = true;
     this._model = options.model;
+
     this._gridHost = document.createElement('div');
     this._gridHost.className = 'grid-stack';
     this._gridHost.classList.add('jp-App-Launcher-gridhost');
     this.node.appendChild(this._gridHost);
+
+    this._spinner = document.createElement('div');
+    this._spinner.classList.add('jp-al-Spinner');
+    const spinner = document.createElement('div');
+    spinner.className = 'jp-al-SpinnerContent';
+    this._spinner.appendChild(spinner);
+    this.node.appendChild(this._spinner);
+
     this.node.style.overflow = 'auto';
     this._grid = GridStack.init(
       {
@@ -32,8 +41,9 @@ export class AppWidget extends Panel {
       },
       this._gridHost
     );
-    this.render();
-    window.dispatchEvent(new Event('resize'));
+    this.render()
+      .catch(console.error)
+      .then(() => window.dispatchEvent(new Event('resize')));
   }
 
   /**
@@ -61,28 +71,29 @@ export class AppWidget extends Panel {
     this._gridElements.push(out);
     const info = out.info;
     const id = out.cellIdentity;
+
     if (info && info.hidden) {
       return;
     }
+
     const options: { [key: string]: any } = {
       id,
       autoPosition: true,
       noMove: true,
       noResize: true,
-      locked: true
+      locked: true,
+      w: 12,
+      h: 1
     };
     if (info && info.row !== null && info.col !== null) {
       options.x = info.col;
       options.y = info.row;
-      options.width = info.width;
-      options.height = info.height;
+      options.w = info.width;
+      options.h = info.height;
       options.autoPosition = false;
     }
-
     MessageLoop.sendMessage(out, Widget.Msg.BeforeAttach);
-
     this._grid.addWidget(out.node, options);
-
     MessageLoop.sendMessage(out, Widget.Msg.AfterAttach);
     this.updateGridItem(id, info);
   }
@@ -107,19 +118,32 @@ export class AppWidget extends Panel {
         locked: true
       };
     }
+
     this._grid.update(item, option);
   }
 
-  render(): void {
+  async render(): Promise<void> {
     const cellList = toArray(this._model.cells.iter());
-    cellList.forEach(cell => {
+    for (const cell of cellList) {
+      const src = cell.value.text;
+      if (src.length === 0) {
+        continue;
+      }
       const el = this._model.createCell(cell);
+      const ret = await this._model.executeCell(
+        cell,
+        el.cellOutput as SimplifiedOutputArea
+      );
+      const outputNode = el.cellOutput.node;
+      if (outputNode.childNodes.length > 0) {
+        this.addGridItem(el);
+        if (ret && ret.content.status === 'error') {
+          this.updateGridItem(el.cellIdentity, { width: 12, height: 4 });
+        }
+      }
+    }
 
-      this.addGridItem(el);
-      this._model
-        .executeCell(cell, el.cellOutput as SimplifiedOutputArea)
-        .catch(console.error);
-    });
+    this.node.removeChild(this._spinner);
   }
 
   protected onCloseRequest(msg: Message): void {
@@ -136,6 +160,8 @@ export class AppWidget extends Panel {
   private _gridHost: HTMLElement;
 
   private _gridElements: GridStackItem[] = [];
+
+  private _spinner: HTMLElement;
 }
 
 export namespace AppWidget {

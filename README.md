@@ -12,8 +12,6 @@
 - Start a local web server and open the predefined URL.
 - Open a remote URL.
 
-
-
 https://user-images.githubusercontent.com/4451292/191499842-3b3aae7b-dd61-416b-9958-6490c1e220c7.mp4
 
 ## Try it online!
