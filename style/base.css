@@ -57,3 +57,37 @@
 .jp-al-app-icon text {
   fill: var(--jp-inverse-layout-color2);
 }
+
+.jp-App-Launcher-gridhost {
+  background-image: unset !important;
+  background-position: unset !important;
+  background: var(--jp-layout-color2);
+}
+
+.grid-stack-item-content {
+  color: var(--jp-content-font-color1);
+  background-color: var(--jp-layout-color1);
+}
+
+.grid-stack .grid-stack-item .grid-stack-item-content {
+  padding: 4px;
+  overflow: auto;
+  border-radius: 5px;
+}
+
+.grid-item-toolbar-spacer {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.grid-item-widget .jp-OutputArea {
+  overflow: visible;
+}
+
+.grid-item-widget .jp-OutputArea-output {
+  overflow: visible;
+}
+
+.grid-item-widget .jupyter-widgets {
+  overflow: visible;
+}
