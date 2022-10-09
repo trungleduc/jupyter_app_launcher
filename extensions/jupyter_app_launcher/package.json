@@ -61,7 +61,7 @@
     "@jupyterlab/launcher": "^3.2.9",
     "@jupyterlab/markdownviewer": "^3.2.9",
     "@jupyterlab/running": "^3.2.9",
-    "gridstack": "^5.0.0 || ^6.0.0"
+    "gridstack": "^6.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -110,14 +110,8 @@
     },
     "extension": true,
     "outputDir": "jupyter_app_launcher/labextension",
-    "sharedPackages": {
-      "gridstack": {
-        "bundled": false,
-        "singleton": true
-      }
-    },
     "_build": {
-      "load": "static/remoteEntry.878d1cded8dbb84d9826.js",
+      "load": "static/remoteEntry.20b2f086f2d37886f161.js",
       "extension": "./extension",
       "style": "./style"
     }
