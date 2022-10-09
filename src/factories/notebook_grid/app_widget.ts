@@ -92,7 +92,7 @@ export class AppWidget extends Panel {
       options.h = info.height;
       options.autoPosition = false;
     }
-    MessageLoop.sendMessage(out, Widget.Msg.BeforeAttach);  
+    MessageLoop.sendMessage(out, Widget.Msg.BeforeAttach);
     this._grid.addWidget(out.node, options);
     MessageLoop.sendMessage(out, Widget.Msg.AfterAttach);
   }
