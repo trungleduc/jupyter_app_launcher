@@ -57,3 +57,9 @@
 .jp-al-app-icon text {
   fill: var(--jp-inverse-layout-color2);
 }
+
+.jp-App-Launcher-gridhost {
+  background-image: unset!important;
+  background-position: unset!important;
+  background: var(--jp-layout-color2);
+}

@@ -34,7 +34,7 @@ export class AppWidget extends Panel {
       {
         float: true,
         column: 12,
-        margin: 2,
+        margin: 3,
         cellHeight: 40,
         styleInHead: true,
         disableOneColumnMode: true
@@ -83,7 +83,7 @@ export class AppWidget extends Panel {
       noResize: true,
       locked: true,
       w: 12,
-      h: 1
+      h: 4
     };
     if (info && info.row !== null && info.col !== null) {
       options.x = info.col;
@@ -92,10 +92,9 @@ export class AppWidget extends Panel {
       options.h = info.height;
       options.autoPosition = false;
     }
-    MessageLoop.sendMessage(out, Widget.Msg.BeforeAttach);
+    MessageLoop.sendMessage(out, Widget.Msg.BeforeAttach);  
     this._grid.addWidget(out.node, options);
     MessageLoop.sendMessage(out, Widget.Msg.AfterAttach);
-    this.updateGridItem(id, info);
   }
 
   updateGridItem(id: string, info?: DashboardCellView): void {
@@ -142,7 +141,6 @@ export class AppWidget extends Panel {
         }
       }
     }
-
     this.node.removeChild(this._spinner);
   }
 
