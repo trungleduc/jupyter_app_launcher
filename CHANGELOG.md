@@ -9,7 +9,7 @@
 ### Enhancements made
 
 - Add notebook gridstack document [#11](https://github.com/trungleduc/jupyter_app_launcher/pull/11) ([@trungleduc](https://github.com/trungleduc))
-- Remove voila-gridstack from dependencies list  [#10](https://github.com/trungleduc/jupyter_app_launcher/pull/10) ([@trungleduc](https://github.com/trungleduc))
+- Remove voila-gridstack from dependencies list [#10](https://github.com/trungleduc/jupyter_app_launcher/pull/10) ([@trungleduc](https://github.com/trungleduc))
 
 ### Documentation improvements
 
