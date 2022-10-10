@@ -4,6 +4,10 @@
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
 
+.jp-al-NotebookGridDoc > div {
+  height: 100%;
+}
+
 .jp-al-Spinner {
   position: absolute;
   display: flex;

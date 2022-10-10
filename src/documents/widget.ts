@@ -43,7 +43,7 @@ export class NotebookGridPanel extends Widget {
     notebookGridFactory: NotebookGridFactory
   ) {
     super();
-
+    this.addClass('jp-al-NotebookGridDoc');
     context.ready.then(async () => {
       const sourceCode = context.model.toString();
       const path = context.contentsModel?.path;
@@ -57,6 +57,7 @@ export class NotebookGridPanel extends Widget {
         type: 'notebook-grid'
       };
       const launcherApp = await notebookGridFactory.create(config);
+
       if (launcherApp) {
         this._widget = launcherApp.panel;
         Widget.attach(this._widget, this.node);

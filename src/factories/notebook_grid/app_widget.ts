@@ -41,9 +41,11 @@ export class AppWidget extends Panel {
       },
       this._gridHost
     );
-    this.render()
-      .catch(console.error)
-      .then(() => window.dispatchEvent(new Event('resize')));
+    this._model.initialize().then(() => {
+      this.render()
+        .catch(console.error)
+        .then(() => window.dispatchEvent(new Event('resize')));
+    });
   }
 
   /**

@@ -67,7 +67,7 @@ export class NotebookGridFactory implements IPanelFactory {
       editorConfig: StaticNotebook.defaultEditorConfig,
       notebookConfig: StaticNotebook.defaultNotebookConfig
     });
-    await model.initialize();
+
     const panel = new AppWidget({
       id: UUID.uuid4(),
       label: config.title,
