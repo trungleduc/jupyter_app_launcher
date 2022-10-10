@@ -138,7 +138,9 @@ This launcher entry will open a predefined notebook in the gridstack dashboard v
    Notebook dashboard demo. 
 
 .. note::
-  This dashboard mode does not depend on `Voila`. It's a frontend-only approach and is a lightweight solution for dashboarding notebooks.
+  - This dashboard mode does not depend on `Voila`. It's a frontend-only approach and is a lightweight solution for dashboarding notebooks.
+  - Users can also open a notebook in this dashboard mode by right clicking on the notebook and select `Open With -> Notebook GridStack` in the context menu.
+
 
 --------------------------------------
 Open a notebook with Voila

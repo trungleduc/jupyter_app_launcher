@@ -17,6 +17,7 @@ import { IAppTracker, IPanelFactoryManager } from './token';
 import { iconFromSvgString, iconFromText } from './tools';
 import { BoxPanel } from '@lumino/widgets';
 import { PromiseDelegate } from '@lumino/coreutils';
+import notebookGrid from './documents/plugin';
 
 /**
  * Initialization data for the jupyter_app_launcher extension.
@@ -139,4 +140,4 @@ async function activate(
   return widgetTracker;
 }
 
-export default [panelFactoryPlugin, plugin];
+export default [panelFactoryPlugin, plugin, notebookGrid];
