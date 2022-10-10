@@ -2,6 +2,27 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.4
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.3...905393074b86d038ec2d82b5ade81158a2f7d44f))
+
+### Enhancements made
+
+- Add notebook gridstack document [#11](https://github.com/trungleduc/jupyter_app_launcher/pull/11) ([@trungleduc](https://github.com/trungleduc))
+- Remove voila-gridstack from dependencies list  [#10](https://github.com/trungleduc/jupyter_app_launcher/pull/10) ([@trungleduc](https://github.com/trungleduc))
+
+### Documentation improvements
+
+- Add notebook gridstack document [#11](https://github.com/trungleduc/jupyter_app_launcher/pull/11) ([@trungleduc](https://github.com/trungleduc))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-10-08&to=2022-10-10&type=c))
+
+[@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2022-10-08..2022-10-10&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-10-08..2022-10-10&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.3
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.2...6dff12cf495574b1881ba93599d94884054cdff8))
@@ -19,8 +40,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-09-18&to=2022-10-08&type=c))
 
 [@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2022-09-18..2022-10-08&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-09-18..2022-10-08&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.2
 
