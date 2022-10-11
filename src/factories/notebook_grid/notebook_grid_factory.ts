@@ -15,9 +15,11 @@ import { ILauncherApp } from './../../token';
 import { AppModel } from './app_model';
 import { AppWidget } from './app_widget';
 
-export class NotebookGridFactory implements IPanelFactory {
+export class NotebookGridFactory implements IPanelFactory<AppWidget> {
   constructor(private options: NotebookGridFactory.IOptions) {}
-  async create(config: ILauncherConfiguration): Promise<ILauncherApp | void> {
+  async create(
+    config: ILauncherConfiguration
+  ): Promise<ILauncherApp<AppWidget> | void> {
     if (!config.sourceCode) {
       console.error('Notebook source is missing');
       return;
@@ -67,7 +69,6 @@ export class NotebookGridFactory implements IPanelFactory {
       editorConfig: StaticNotebook.defaultEditorConfig,
       notebookConfig: StaticNotebook.defaultNotebookConfig
     });
-
     const panel = new AppWidget({
       id: UUID.uuid4(),
       label: config.title,

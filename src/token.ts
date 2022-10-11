@@ -42,16 +42,16 @@ export interface IAppTracker extends IWidgetTracker<Widget> {
   instanceChanged: ISignal<IAppTracker, void>;
 }
 
-export interface ILauncherApp {
-  panel: Widget;
+export interface ILauncherApp<T extends Widget = Widget> {
+  panel: T;
   ready?: Promise<void>;
 }
 
-export interface IPanelFactory {
+export interface IPanelFactory<T extends Widget = Widget> {
   create(
     config: ILauncherConfiguration,
     args?: IDict
-  ): Promise<ILauncherApp | void>;
+  ): Promise<ILauncherApp<T> | void>;
 }
 
 export interface IPanelFactoryManager extends IDisposable {
