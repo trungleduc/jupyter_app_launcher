@@ -84,5 +84,9 @@ export class NotebookGridPanel extends Widget {
     return this._widget.model.context.sessionContext;
   }
 
+  get model(): INotebookModel | null {
+    return this._widget.model.context.model;
+  }
+
   private _widget: AppWidget;
 }
