@@ -21,10 +21,11 @@ export class NotebookGridWidgetFactory extends ABCWidgetFactory<
   protected createNewWidget(
     context: DocumentRegistry.IContext<INotebookModel>
   ): NotebookGridDocWidget {
-    return new NotebookGridDocWidget({
+    const widget = new NotebookGridDocWidget({
       context,
       content: new NotebookGridPanel(context, this._notebookGridFactory)
     });
+    return widget;
   }
 
   private _notebookGridFactory: NotebookGridFactory;

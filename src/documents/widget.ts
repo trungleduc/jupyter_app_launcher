@@ -7,11 +7,13 @@ import {
 } from '@jupyterlab/notebook';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { ServiceManager } from '@jupyterlab/services';
+import { ISessionContext } from '@jupyterlab/apputils';
 import { Signal } from '@lumino/signaling';
 import { Widget } from '@lumino/widgets';
 
 import { NotebookGridFactory } from '../factories/notebook_grid/notebook_grid_factory';
 import { ILauncherConfiguration } from '../schema';
+import { AppWidget } from '../factories/notebook_grid/app_widget';
 
 export interface IGridOptions {
   manager: ServiceManager;
@@ -26,7 +28,7 @@ export class NotebookGridDocWidget extends DocumentWidget<
   INotebookModel
 > {
   constructor(
-    options: DocumentWidget.IOptions<NotebookGridPanel, INotebookModel>
+    private options: DocumentWidget.IOptions<NotebookGridPanel, INotebookModel>
   ) {
     super(options);
   }
@@ -34,6 +36,10 @@ export class NotebookGridDocWidget extends DocumentWidget<
   dispose(): void {
     this.content.dispose();
     super.dispose();
+  }
+
+  get sessionContext(): ISessionContext {
+    return this.options.content.sessionContext;
   }
 }
 
@@ -74,5 +80,13 @@ export class NotebookGridPanel extends Widget {
     super.dispose();
   }
 
-  private _widget: Widget;
+  get sessionContext(): ISessionContext {
+    return this._widget.model.context.sessionContext;
+  }
+
+  get model(): INotebookModel | null {
+    return this._widget.model.context.model;
+  }
+
+  private _widget: AppWidget;
 }
