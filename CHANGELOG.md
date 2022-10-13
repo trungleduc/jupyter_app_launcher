@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.5
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.4...7040059d7c75904332f7d08a1f1e374e2ef3c117))
+
+### Merged PRs
+
+- Fix missing session of grid app [#14](https://github.com/trungleduc/jupyter_app_launcher/pull/14) ([@trungleduc](https://github.com/trungleduc))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-10-10&to=2022-10-13&type=c))
+
+[@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-10-10..2022-10-13&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.4
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.3...905393074b86d038ec2d82b5ade81158a2f7d44f))
@@ -20,8 +36,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-10-08&to=2022-10-10&type=c))
 
 [@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2022-10-08..2022-10-10&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-10-08..2022-10-10&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.3
 
