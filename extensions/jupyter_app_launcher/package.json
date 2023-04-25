@@ -1,6 +1,6 @@
 {
   "name": "jupyter_app_launcher",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A JupyterLab extension to create custom launcher entries.",
   "keywords": [
     "jupyter",
@@ -111,7 +111,7 @@
     "extension": true,
     "outputDir": "jupyter_app_launcher/labextension",
     "_build": {
-      "load": "static/remoteEntry.98915bf440ab530b6222.js",
+      "load": "static/remoteEntry.5ce5bfbe64e1f319bb42.js",
       "extension": "./extension",
       "style": "./style"
     }
