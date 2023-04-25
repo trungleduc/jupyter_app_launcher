@@ -191,7 +191,7 @@ This launcher entry will start a process with predefined commands and open a loc
 
 - ``type`` = ``local-server``
 - ``args``: The command which will be executed inside a sub-process, defined as a list of arguments. For the web server applications that need to define the listening port, users can use the `PORT` variable. 
-- ``source``: The URL which will be opened after executing the command. *jupyter_app_launcher* will poll for the availability of the URL for 120 seconds.
+- ``source``: The URL which will be opened after executing the command. *jupyter_app_launcher* will poll for the availability of the URL for 120 seconds. Environment variables inside URL will be substituted with the value of the variable.
 - ``cwd``: Current working directory of the subprocess.
 
 .. figure:: images/local-url.gif
