@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.6
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.5...1633002852cafdc3bd97165e86bab9967f3474c4))
+
+### Merged PRs
+
+- Substitute environment variables in URL source [#28](https://github.com/trungleduc/jupyter_app_launcher/pull/28) ([@sinkuladis](https://github.com/sinkuladis))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-10-13&to=2023-04-25&type=c))
+
+[@sinkuladis](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Asinkuladis+updated%3A2022-10-13..2023-04-25&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.5
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.4...7040059d7c75904332f7d08a1f1e374e2ef3c117))
@@ -15,8 +31,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-10-10&to=2022-10-13&type=c))
 
 [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2022-10-10..2022-10-13&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.4
 
