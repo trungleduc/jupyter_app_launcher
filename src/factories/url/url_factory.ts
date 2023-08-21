@@ -10,12 +10,17 @@ export class URLFactory implements IPanelFactory {
   async create(
     config: ILauncherConfiguration,
     args: IDict
-  ): Promise<ILauncherApp> {
+  ): Promise<ILauncherApp | void> {
     const instanceId = UUID.uuid4();
     const options: IFrame.IOptions = {};
     if (config.args) {
       const sandbox = (config.args as IDict)['sandbox'];
       const referrerPolicy = (config.args as IDict)['referrerPolicy'];
+      const createNewWindow = (config.args as IDict)['createNewWindow'];
+      if (createNewWindow) {
+        window.open(config.source, '_blank');
+        return;
+      }
       if (sandbox) {
         options['sandbox'] = sandbox;
       }
