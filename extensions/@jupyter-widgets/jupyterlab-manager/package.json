@@ -1,6 +1,6 @@
 {
   "name": "@jupyter-widgets/jupyterlab-manager",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "The JupyterLab extension providing Jupyter widgets.",
   "keywords": [
     "jupyter",
@@ -92,7 +92,7 @@
     "outputDir": "jupyterlab_widgets/labextension",
     "schemaDir": "./schema",
     "_build": {
-      "load": "static/remoteEntry.3fbe0e47321133b4e650.js",
+      "load": "static/remoteEntry.70c833341ac48a983a8c.js",
       "extension": "./extension"
     }
   }

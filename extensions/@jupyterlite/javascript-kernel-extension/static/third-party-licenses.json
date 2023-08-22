@@ -8,13 +8,13 @@
     },
     {
       "name": "@jupyterlite/javascript-kernel",
-      "versionInfo": "0.1.0",
+      "versionInfo": "0.1.2",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/kernel",
-      "versionInfo": "0.1.0",
+      "versionInfo": "0.1.2",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
