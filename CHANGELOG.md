@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.7
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.6...3421979a03ce58c28bccd84694c558594d956a7d))
+
+### Enhancements made
+
+- Implemented createNewWindow option [#38](https://github.com/trungleduc/jupyter_app_launcher/pull/38) ([@imcovangent](https://github.com/imcovangent))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2023-04-25&to=2023-08-22&type=c))
+
+[@imcovangent](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Aimcovangent+updated%3A2023-04-25..2023-08-22&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2023-04-25..2023-08-22&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.6
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.1.5...1633002852cafdc3bd97165e86bab9967f3474c4))
@@ -15,8 +31,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2022-10-13&to=2023-04-25&type=c))
 
 [@sinkuladis](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Asinkuladis+updated%3A2022-10-13..2023-04-25&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.5
 
