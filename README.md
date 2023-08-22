@@ -10,7 +10,7 @@
 - Render a notebook in dashboard mode
 - Open a notebook with Voila
 - Start a local web server and open the predefined URL.
-- Open a remote URL.
+- Open a remote URL (as widget tab in Jupyter or in new browser window).
 
 https://user-images.githubusercontent.com/4451292/191499842-3b3aae7b-dd61-416b-9958-6490c1e220c7.mp4
 

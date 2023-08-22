@@ -51,6 +51,14 @@ The YAML file should contain an array of objects, *jupyter_app_launcher* will cr
       args:
           sandbox: [ 'allow-same-origin', 'allow-scripts', 'allow-downloads', 'allow-modals', 'allow-popups']
 
+    - title: URL example (new window)
+      description: Example of opening a URL in a new browser window
+      source: https://jupyterlab.readthedocs.io/en/stable/
+      type: url
+      catalog: Another catalog
+      args:
+          createNewWindow: true
+
     - title: Streamlit example
       description: Example of opening a streamlit app 
       source: http://localhost:$PORT/
@@ -217,10 +225,11 @@ This launcher entry will open the predefined URL in a new panel of JupyterLab by
       args:
           sandbox: [ 'allow-same-origin', 'allow-scripts', 'allow-downloads', 'allow-modals', 'allow-popups']
           referrerPolicy: ['no-referrer']
+          createNewWindow: false
 
 - ``type`` = ``url``
 - ``source``: The URL which will be opened by this entry.
-- ``args`` (Optional): The sandbox and referrer policy setting of the IFrame. 
+- ``args`` (Optional): The sandbox and referrer policy setting of the IFrame. Alternatively, set ``createNewWindow`` to ``true`` to open the URL in a new browser window.
 - ``cwd``: Unused.
 
 .. figure:: images/url.gif

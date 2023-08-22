@@ -19,6 +19,8 @@ import { BoxPanel } from '@lumino/widgets';
 import { PromiseDelegate } from '@lumino/coreutils';
 import notebookGrid from './documents/plugin';
 
+import { IDict } from './token';
+
 /**
  * Initialization data for the jupyter_app_launcher extension.
  */
@@ -67,7 +69,18 @@ async function activate(
           spacing: 0
         });
         const reveal = new PromiseDelegate<void>();
-        if (config.type !== 'notebook') {
+
+        let skipMainAreaWidget = false;
+        if (config.type === 'notebook') {
+          skipMainAreaWidget = true;
+        } else if (
+          config.type === 'url' &&
+          (config.args as IDict)['createNewWindow']
+        ) {
+          skipMainAreaWidget = true;
+        }
+
+        if (!skipMainAreaWidget) {
           wrapper.title.label = config.title;
           const main = new MainAreaWidget({
             content: wrapper,
