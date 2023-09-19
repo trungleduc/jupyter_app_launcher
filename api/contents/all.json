@@ -2,21 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2023-08-23T09:13:45.178186Z",
+      "created": "2023-09-19T17:48:08.115016Z",
       "format": null,
-      "last_modified": "2023-08-23T09:13:42.854185Z",
-      "mimetype": "application/json",
-      "name": "data.json",
-      "path": "./data.json",
-      "size": 61060,
-      "type": "file",
-      "writable": true
-    },
-    {
-      "content": null,
-      "created": "2023-08-23T09:13:45.178186Z",
-      "format": null,
-      "last_modified": "2023-08-23T09:13:42.854185Z",
+      "last_modified": "2023-09-19T17:48:05.823016Z",
       "mimetype": "application/json",
       "name": "ticker2.json",
       "path": "./ticker2.json",
@@ -26,9 +14,21 @@
     },
     {
       "content": null,
-      "created": "2023-08-23T09:13:45.174186Z",
+      "created": "2023-09-19T17:48:08.115016Z",
       "format": null,
-      "last_modified": "2023-08-23T09:13:42.854185Z",
+      "last_modified": "2023-09-19T17:48:05.819016Z",
+      "mimetype": "application/json",
+      "name": "data.json",
+      "path": "./data.json",
+      "size": 61060,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-19T17:48:08.115016Z",
+      "format": null,
+      "last_modified": "2023-09-19T17:48:05.823016Z",
       "mimetype": "application/json",
       "name": "beam.json",
       "path": "./beam.json",
@@ -37,9 +37,9 @@
       "writable": true
     }
   ],
-  "created": "2023-08-23T09:13:45.178186Z",
+  "created": "2023-09-19T17:48:08.115016Z",
   "format": "json",
-  "last_modified": "2023-08-23T09:13:45.178186Z",
+  "last_modified": "2023-09-19T17:48:08.115016Z",
   "mimetype": null,
   "name": ".",
   "path": ".",
