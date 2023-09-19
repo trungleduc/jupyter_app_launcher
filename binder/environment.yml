@@ -19,7 +19,7 @@ dependencies:
   - wheel
   - ipywidgets
   - ipyflex
-  - voila
+  - voila<0.4.0
   - voila-gridstack
   - ipyleaflet
   - streamlit=1.11.1
