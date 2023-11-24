@@ -38,7 +38,7 @@ export class NotebookGridDocWidget extends DocumentWidget<
     super.dispose();
   }
 
-  get sessionContext(): ISessionContext {
+  get sessionContext(): ISessionContext | undefined {
     return this.options.content.sessionContext;
   }
 }
@@ -75,18 +75,18 @@ export class NotebookGridPanel extends Widget {
     if (this.isDisposed) {
       return;
     }
-    this._widget.dispose();
+    this._widget?.dispose();
     Signal.clearData(this);
     super.dispose();
   }
 
-  get sessionContext(): ISessionContext {
-    return this._widget.model.context.sessionContext;
+  get sessionContext(): ISessionContext | undefined {
+    return this._widget?.model.context?.sessionContext;
   }
 
-  get model(): INotebookModel | null {
-    return this._widget.model.context.model;
+  get model(): INotebookModel | undefined {
+    return this._widget?.model.context?.model;
   }
 
-  private _widget: AppWidget;
+  private _widget: AppWidget | undefined;
 }

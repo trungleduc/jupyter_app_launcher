@@ -26,7 +26,7 @@ export class NotebookFactory implements IPanelFactory {
     });
     await doc.context.ready;
     doc.context.model.fromString(config.sourceCode);
-    doc.context.model.initialize();
+    // doc.context.model.initialize();
     let renamed = false;
     let index = 0;
     while (!renamed) {

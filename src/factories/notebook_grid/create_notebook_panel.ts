@@ -9,8 +9,8 @@ import { ServiceManager } from '@jupyterlab/services';
 import { UUID } from '@lumino/coreutils';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 
-import { editorServices } from '@jupyterlab/codemirror';
 import { CustomContext } from './custom_context';
+import { IEditorServices } from '@jupyterlab/codeeditor';
 
 export async function createNotebookContext(options: {
   manager: ServiceManager.IManager;
@@ -35,16 +35,18 @@ export async function createNotebookContext(options: {
     }
   });
 
-  await context.model.initialize();
+  // await context.model.initialize();
   await context.sessionContext.initialize();
   await context.sessionContext.session?.kernel?.info;
   return context;
 }
 
-export function createNotebook(rendermime: IRenderMimeRegistry): Notebook {
-  const editorFactory = editorServices.factoryService.newInlineEditor.bind(
-    editorServices.factoryService
-  );
+export function createNotebook(options: {
+  rendermime: IRenderMimeRegistry;
+  editorServices: IEditorServices;
+}): Notebook {
+  const { rendermime, editorServices } = options;
+  const editorFactory = editorServices.factoryService.newInlineEditor;
   return new Notebook({
     rendermime,
     contentFactory: new Notebook.ContentFactory({ editorFactory }),
@@ -52,11 +54,13 @@ export function createNotebook(rendermime: IRenderMimeRegistry): Notebook {
   });
 }
 
-export function createNotebookPanel(
-  context: Context<INotebookModel>,
-  rendermime: IRenderMimeRegistry
-): NotebookPanel {
-  const content = createNotebook(rendermime);
+export function createNotebookPanel(options: {
+  context: Context<INotebookModel>;
+  rendermime: IRenderMimeRegistry;
+  editorServices: IEditorServices;
+}): NotebookPanel {
+  const { context, rendermime, editorServices } = options;
+  const content = createNotebook({ rendermime, editorServices });
   return new NotebookPanel({
     content,
     context

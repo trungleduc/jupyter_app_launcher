@@ -30,14 +30,16 @@
   height: 6em;
   border-radius: 50%;
   position: relative;
-  animation: load3 1s infinite linear, fadeIn 1s;
+  animation:
+    load3 1s infinite linear,
+    fadeIn 1s;
 }
 
-.jp-al-SpinnerContent:before {
+.jp-al-SpinnerContent::before {
   width: 50%;
   height: 50%;
   background: #f3762605;
-  border-radius: 100% 0 100% 0;
+  border-radius: 100% 0;
   box-shadow: inset 6px 5px 0 1px #f37626;
   position: absolute;
   top: 0;
@@ -45,17 +47,14 @@
   content: '';
 }
 
-.jp-al-SpinnerContent:after {
+.jp-al-SpinnerContent::after {
   width: 75%;
   height: 75%;
   border-radius: 50%;
   content: '';
   margin: auto;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
 }
 
 .jp-al-app-icon text {
@@ -63,9 +62,9 @@
 }
 
 .jp-App-Launcher-gridhost {
+  background: var(--jp-layout-color2);
   background-image: unset !important;
   background-position: unset !important;
-  background: var(--jp-layout-color2);
 }
 
 .grid-stack-item-content {

@@ -29,7 +29,7 @@ export class MarkdownFactory implements IPanelFactory {
       factory,
       path
     });
-    await context.model.initialize();
+    // await context.model.initialize();
     await context.sessionContext.initialize();
     context.model.fromString(config.sourceCode);
     context.resolveReady();
@@ -46,6 +46,6 @@ export class MarkdownFactory implements IPanelFactory {
 export namespace MarkdownFactory {
   export interface IOptions {
     rendermime: IRenderMimeRegistry;
-    manager: ServiceManager;
+    manager: ServiceManager.IManager;
   }
 }

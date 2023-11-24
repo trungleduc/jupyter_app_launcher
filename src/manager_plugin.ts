@@ -37,7 +37,8 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
       rendermime,
       tracker,
       contentFactory,
-      mimeTypeService: editorServices.mimeTypeService
+      mimeTypeService: editorServices.mimeTypeService,
+      editorServices
     });
     manager.registerFactory('notebook-grid', notebookGridFactory);
 
