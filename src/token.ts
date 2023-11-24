@@ -2,8 +2,7 @@ import { IExecuteReplyMsg } from '@jupyterlab/services/lib/kernel/messages';
 import { IWidgetTracker } from '@jupyterlab/apputils';
 import { ICellModel } from '@jupyterlab/cells';
 import { Context } from '@jupyterlab/docregistry';
-import { INotebookModel, NotebookPanel } from '@jupyterlab/notebook';
-import { IObservableUndoableList } from '@jupyterlab/observables';
+import { CellList, INotebookModel, NotebookPanel } from '@jupyterlab/notebook';
 import { SimplifiedOutputArea } from '@jupyterlab/outputarea';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { Token } from '@lumino/coreutils';
@@ -19,9 +18,9 @@ export interface IDict<T = any> {
 }
 
 export interface IAppModel extends IDisposable {
-  context: Context<INotebookModel>;
-  panel: NotebookPanel;
-  cells: IObservableUndoableList<ICellModel>;
+  context?: Context<INotebookModel>;
+  panel?: NotebookPanel;
+  cells?: CellList;
   rendermime: IRenderMimeRegistry;
   initialize(): Promise<void>;
   createCell(cellModel: ICellModel): GridStackItem;

@@ -1,5 +1,4 @@
 import { SimplifiedOutputArea } from '@jupyterlab/outputarea';
-import { toArray } from '@lumino/algorithm';
 import { GridStackItem } from './item';
 import { PromiseDelegate } from '@lumino/coreutils';
 import { Message, MessageLoop } from '@lumino/messaging';
@@ -124,9 +123,9 @@ export class AppWidget extends Panel {
   }
 
   async render(): Promise<void> {
-    const cellList = toArray(this._model.cells.iter());
+    const cellList = this._model.cells ?? [];
     for (const cell of cellList) {
-      const src = cell.value.text;
+      const src = cell.sharedModel.source;
       if (src.length === 0) {
         continue;
       }

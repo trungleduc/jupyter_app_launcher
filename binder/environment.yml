@@ -12,15 +12,14 @@ channels:
 dependencies:
   # runtime dependencies
   - python=3.10
-  - jupyterlab >=3,<4.0.0a0
+  - jupyterlab >=4,<5
   # labextension build dependencies
   - nodejs=18
   - pip
   - wheel
   - ipywidgets
   - ipyflex
-  - voila<0.4.0
-  - voila-gridstack
+  - voila
   - ipyleaflet
   - streamlit=1.11.1
   - pandas

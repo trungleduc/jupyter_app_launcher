@@ -33,7 +33,8 @@ const activate = (
     rendermime,
     tracker,
     contentFactory,
-    mimeTypeService: editorServices.mimeTypeService
+    mimeTypeService: editorServices.mimeTypeService,
+    editorServices
   });
   const widgetFactory = new NotebookGridWidgetFactory({
     name: FACTORY,

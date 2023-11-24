@@ -1,4 +1,7 @@
-import { IEditorMimeTypeService } from '@jupyterlab/codeeditor';
+import {
+  IEditorMimeTypeService,
+  IEditorServices
+} from '@jupyterlab/codeeditor';
 import * as nbformat from '@jupyterlab/nbformat';
 import {
   INotebookTracker,
@@ -67,7 +70,8 @@ export class NotebookGridFactory implements IPanelFactory<AppWidget> {
       contentFactory: this.options.contentFactory,
       mimeTypeService: this.options.mimeTypeService,
       editorConfig: StaticNotebook.defaultEditorConfig,
-      notebookConfig: StaticNotebook.defaultNotebookConfig
+      notebookConfig: StaticNotebook.defaultNotebookConfig,
+      editorServices: this.options.editorServices
     });
     const panel = new AppWidget({
       id: UUID.uuid4(),
@@ -80,10 +84,11 @@ export class NotebookGridFactory implements IPanelFactory<AppWidget> {
 
 export namespace NotebookGridFactory {
   export interface IOptions {
-    manager: ServiceManager;
+    manager: ServiceManager.IManager;
     rendermime: IRenderMimeRegistry;
     tracker: INotebookTracker;
     contentFactory: NotebookPanel.IContentFactory;
     mimeTypeService: IEditorMimeTypeService;
+    editorServices: IEditorServices;
   }
 }

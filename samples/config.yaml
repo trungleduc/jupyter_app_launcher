@@ -1,0 +1,32 @@
+- title: Streamlit example
+  description: Example of opening a streamlit app
+  source: http://localhost:$PORT/
+  cwd: ./
+  type: local-server
+  args:
+    - python
+    - -m
+    - http.server
+    - $PORT
+  catalog: Another catalog
+
+- title: URL example
+  description: Example of opening a URL in a tab
+  source: https://jupyterlab.readthedocs.io/en/stable/
+  type: url
+  catalog: Another catalog
+  args:
+      sandbox: [ 'allow-same-origin', 'allow-scripts', 'allow-downloads', 'allow-modals', 'allow-popups']
+
+- title: Dashboard example
+  description: Example of opening a notebook in dashboard mode without Voila
+  source: ./sample.ipynb
+  cwd: ./samples
+  type: notebook-grid
+
+- title: Notebook example
+  description: Example of opening a notebook in dashboard mode without Voila
+  source: ./sample.ipynb
+  cwd: ./samples
+  type: notebook
+  catalog: Another catalog
