@@ -16,7 +16,8 @@ def build_lite():
             raise ArgumentError('Missing arguments')
         cwd = os.getcwd()
         source = create_abs_path(argv[2], cwd)
-        raw_config = parse_config(source)
+        config_file = os.path.join(source, 'jp_app_launcher_config.yaml')
+        raw_config = parse_config(source, config_file)
         config = [
             x
             for x in raw_config

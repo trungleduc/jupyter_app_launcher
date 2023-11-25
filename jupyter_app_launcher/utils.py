@@ -36,8 +36,8 @@ def path_to_res(path: str, cwd: str) -> str:
     return content
 
 
-def parse_config(path: str) -> List[Dict]:
-    config_file = os.path.join(path, 'config.yaml')
+def parse_config(path: str, config_file: str) -> List[Dict]:
+
     with open(config_file, 'r') as f:
         yaml_data: List[Dict] = yaml.load(f, Loader=yaml.CLoader)
     ret = []
