@@ -1,0 +1,6 @@
+- title: Notebook example in config 2
+  description: Example of opening a notebook in dashboard mode without Voila
+  source: ./sample.ipynb
+  cwd: ./samples
+  type: notebook
+  catalog: Another catalog
