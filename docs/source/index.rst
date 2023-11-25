@@ -1,10 +1,9 @@
 
-jupyter_app_launcher
+JupyterLab App Launcher Documentation
 =================================================================================
 
    Custom launcher entries for JupyterLab.
 
-Version: |release|
 
 **jupyter_app_launcher** helps users customize the JupyterLab launcher with a simple YAML file. Users can add custom entries to the launcher to:
 
