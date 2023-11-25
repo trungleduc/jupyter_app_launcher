@@ -7,9 +7,35 @@ Usage
 Configuration file location
 ==========================================
 
-By default, *jupyter_app_launcher* will look for a configuration file in the list of data directories of *Jupyter* (i.e. the data section of the ``jupyter --path`` command). If under one of these paths, the ``jupyter_app_launcher/config.yaml`` file exists, it will be used.
+By default, *jupyter_app_launcher* will look for `jupyter_app_launcher` directory in the list of data directories of *Jupyter* (i.e. the data section of the ``jupyter --path`` command), for example:
 
-Users can bypass this behavior by setting the ``JUPYTER_APP_LAUNCHER_PATH`` environment variable with the path to the directory containing the ``config.yaml`` file.
+.. code-block:: shell
+
+  > jupyter --path
+
+  config:
+      /home/***/mambaforge/envs/appdev/etc/jupyter
+      /home/***/.jupyter
+      /home/***/.local/etc/jupyter
+      /usr/local/etc/jupyter
+      /etc/jupyter
+  data: # -> Here are the paths used by jupyter_app_launcher
+      /home/***/mambaforge/envs/appdev/share/jupyter
+      /home/***/.local/share/jupyter
+      /usr/local/share/jupyter
+      /usr/share/jupyter
+  runtime:
+      /home/***/.local/share/jupyter/runtime
+
+If under the `jupyter_app_launcher` directory of these paths, YAML files (`.yaml`, `.yml`) with name starting with `jp_app_launcher` exist, they will be used. For example, the following files will be loaded:
+
+.. code-block:: shell
+
+  /home/***/mambaforge/envs/appdev/share/jupyter/jupyter_app_launcher/jp_app_launcher.yaml
+  /home/***/mambaforge/envs/appdev/share/jupyter/jupyter_app_launcher/jp_app_launcher_my_app.yml
+  /home/***/.local/share/jupyter/jupyter_app_launcher/jp_app_launcher_my_other_app.yml
+
+In addition to this behavior, `jupyter_app_launcher` also loads the YAML files with names starting with `jp_app_launcher` in the directory where JupyterLab was started, and also in the path defined by the ``JUPYTER_APP_LAUNCHER_PATH`` environment variable.
 
 .. note::
   This extension only reads the configuration file when JupyterLab starts. Users need to restart JupyterLab after changing the config file.
