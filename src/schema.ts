@@ -10,7 +10,7 @@ export interface ILauncherConfiguration {
   description?: string;
   icon?: string;
   id: string;
-  source: string | ICcommandSchema[];
+  source: string | ICommandSchema[];
   sourceCode?: string;
   cwd?: string;
   type:
@@ -32,7 +32,7 @@ export interface ILauncherConfiguration {
  * This interface was referenced by `ILauncherConfiguration`'s JSON-Schema
  * via the `definition` "commandSchema".
  */
-export interface ICcommandSchema {
+export interface ICommandSchema {
   label: string;
   id: string;
   args: any;

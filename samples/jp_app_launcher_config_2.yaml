@@ -1,6 +1,17 @@
 - title: Notebook example in config 2
   description: Example of opening a notebook in dashboard mode without Voila
   source: ./sample.ipynb
-  cwd: ./samples
+  cwd: '.'
   type: notebook
-  catalog: Another catalog
+  catalog: Config 2
+
+- title: Command example 2
+  description: Example of calling JupyterLab commands
+  type: jupyterlab-commands
+  source:
+    - label: Command 1
+      id: 'filebrowser:open-path'
+      args:
+        path: sample.ipynb
+  cwd: '.'
+  catalog: Config 2

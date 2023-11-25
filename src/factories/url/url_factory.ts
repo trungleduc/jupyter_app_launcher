@@ -11,6 +11,10 @@ export class URLFactory implements IPanelFactory {
     config: ILauncherConfiguration,
     args: IDict
   ): Promise<ILauncherApp | void> {
+    const source = config.source as string;
+    if (!(typeof source !== 'string')) {
+      return;
+    }
     const instanceId = UUID.uuid4();
     const options: IFrame.IOptions = {};
     if (config.args) {
@@ -18,7 +22,7 @@ export class URLFactory implements IPanelFactory {
       const referrerPolicy = (config.args as IDict)['referrerPolicy'];
       const createNewWindow = (config.args as IDict)['createNewWindow'];
       if (createNewWindow) {
-        window.open(config.source, '_blank');
+        window.open(source, '_blank');
         return;
       }
       if (sandbox) {
@@ -41,7 +45,7 @@ export class URLFactory implements IPanelFactory {
         })
       });
     });
-    widget.url = config.source;
+    widget.url = source;
     return { panel: widget };
   }
 }

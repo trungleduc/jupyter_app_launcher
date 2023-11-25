@@ -56,7 +56,7 @@
   "type": "object",
   "definitions": {
     "commandSchema": {
-      "title": "ICcommandSchema",
+      "title": "ICommandSchema",
       "type": "object",
       "required": ["label", "id", "args"],
       "additionalProperties": false,

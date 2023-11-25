@@ -12,6 +12,7 @@ import { NotebookGridFactory } from './factories/notebook_grid/notebook_grid_fac
 import { PanelFactoryManager } from './factory_manager';
 import { IPanelFactoryManager } from './token';
 import { LocalServerFactory } from './factories/local_server/local_server_factory';
+import { CommandsFactory } from './factories/commands/commands_factory';
 import { URLFactory } from './factories/url/url_factory';
 import { MarkdownFactory } from './factories/markdown/markdown_factory';
 
@@ -62,6 +63,10 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     });
     manager.registerFactory('markdown', markdownFactory);
 
+    const cmdFactory = new CommandsFactory({
+      commands: app.commands
+    });
+    manager.registerFactory('jupyterlab-commands', cmdFactory);
     return manager;
   },
   provides: IPanelFactoryManager
