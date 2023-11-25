@@ -1,4 +1,3 @@
-
 name: jupyter_app_launcher_docs
 channels:
   - conda-forge

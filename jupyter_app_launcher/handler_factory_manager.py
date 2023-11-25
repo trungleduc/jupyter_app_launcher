@@ -12,7 +12,7 @@ class HandlerFactoryManager:
     ) -> None:
         name = Cls.name()
         if name in self._factoryMap:
-            print(f'Factory for {name} is already registered, replacing!')
+            print(f"Factory for {name} is already registered, replacing!")
         self._factoryMap[name] = Cls
 
     def create_factory(

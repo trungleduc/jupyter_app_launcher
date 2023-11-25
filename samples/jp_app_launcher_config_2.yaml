@@ -5,7 +5,7 @@
   type: notebook
   catalog: Config 2
 
-- title: Markdown 
+- title: Markdown
   description: Example of opening a markdown file
   source: ./beam.md
   cwd: '.'

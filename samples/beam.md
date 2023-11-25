@@ -1,4 +1,4 @@
-<h1 align="center">Simple beam modeling</h1> 
+<h1 align="center">Simple beam modeling</h1>
 <div  align="center">
 <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Simple_beam_with_center_load.svg"  />
 </div>

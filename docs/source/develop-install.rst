@@ -22,7 +22,7 @@ The ``jlpm`` command is JupyterLab's pinned version of `yarn <https://yarnpkg.co
     jupyter server extension enable jupyter_app_launcher
     # Rebuild extension Typescript source after making changes
     jlpm build
-    
+
 
 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
@@ -49,7 +49,7 @@ Development uninstallation
     # Server extension must be manually disabled in develop mode
     jupyter server extension disable jupyter_app_launcher
     pip uninstall jupyter_app_launcher
-    
+
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`

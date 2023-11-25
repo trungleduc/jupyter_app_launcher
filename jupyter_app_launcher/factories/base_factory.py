@@ -15,7 +15,7 @@ class BaseFactory(ABC):
         pass
 
     def get_type(self) -> str:
-        return self._config.get('type', None)
+        return self._config.get("type", None)
 
     @abstractmethod
     def process(self, request: Dict, **kwargs) -> Any:
