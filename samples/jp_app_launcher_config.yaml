@@ -16,7 +16,14 @@
   type: url
   catalog: Another catalog
   args:
-      sandbox: [ 'allow-same-origin', 'allow-scripts', 'allow-downloads', 'allow-modals', 'allow-popups']
+    sandbox:
+      [
+        'allow-same-origin',
+        'allow-scripts',
+        'allow-downloads',
+        'allow-modals',
+        'allow-popups'
+      ]
 
 - title: Dashboard example
   description: Example of opening a notebook in dashboard mode without Voila

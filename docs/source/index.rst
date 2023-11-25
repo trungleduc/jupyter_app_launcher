@@ -1,5 +1,5 @@
 
-jupyter_app_launcher 
+jupyter_app_launcher
 =================================================================================
 
    Custom launcher entries for JupyterLab.
@@ -10,13 +10,13 @@ Version: |release|
 
 - Open a predefined notebook or markdown file.
 - Render a notebook in dashboard mode
-- Open a notebook with Voila  
+- Open a notebook with Voila
 - Start a local process and open the defined URL.
 - Open a remote URL.
 
 .. figure:: images/launcher-app.gif
 
-   Launcher demo.  
+   Launcher demo.
 
 Installation
 -------------
@@ -51,7 +51,7 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   
+
    changelog
 
 .. links

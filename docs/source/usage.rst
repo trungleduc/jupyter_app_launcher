@@ -49,20 +49,20 @@ The YAML file should contain an array of objects, *jupyter_app_launcher* will cr
 
     - title: Dashboard example
       description: Example of opening a notebook in dashboard mode without Voila
-      source: ../../samples/sample.ipynb 
+      source: ../../samples/sample.ipynb
       cwd: ../../samples
       type: notebook-grid
 
     - title: Notebook example
       description: Example of opening a notebook in dashboard mode without Voila
-      source: ../../samples/sample.ipynb 
+      source: ../../samples/sample.ipynb
       cwd: ../../samples
       type: notebook
       catalog: Another catalog
 
     - title: Voila example
       description: Example of opening a notebook in dashboard mode with Voila
-      source: ../../samples/sample.ipynb 
+      source: ../../samples/sample.ipynb
       cwd: ../../samples
       type: notebook-voila
       args:
@@ -86,7 +86,7 @@ The YAML file should contain an array of objects, *jupyter_app_launcher* will cr
           createNewWindow: true
 
     - title: Streamlit example
-      description: Example of opening a streamlit app 
+      description: Example of opening a streamlit app
       source: http://localhost:$PORT/
       cwd: ./
       type: local-server
@@ -117,12 +117,12 @@ The common fields of the configurations are: ``title``, ``description``  ``icon`
 - ``title``: Title of the launcher entry.
 - ``description`` (Optional): Description of the launcher entry. It will be shown on mouse hover.
 - ``icon`` (Optional): Path to the icon of the launcher entry. If it is not defined, the initials of the title will be used as the icon.
-- ``catalog`` (Optional): Catalog of the launcher entry, entry with the same catalog will be grouped in the same group in the launcher, If it is not defined, `Jupyter App` catalog will be used. 
+- ``catalog`` (Optional): Catalog of the launcher entry, entry with the same catalog will be grouped in the same group in the launcher, If it is not defined, `Jupyter App` catalog will be used.
 
 Other fields will have different meanings depending on the entry type. In this section, we will detail these fields for each type of entry.
 
 ----------------------------------------------
-Open a predefined notebook 
+Open a predefined notebook
 ----------------------------------------------
 This launcher entry will create a new notebook in the current working directory of *JupyterLab* with predefined content.
 
@@ -130,18 +130,18 @@ This launcher entry will create a new notebook in the current working directory 
 
     - title: Notebook example
       description: Example of opening a notebook in dashboard mode without Voila
-      source: ../../samples/sample.ipynb 
+      source: ../../samples/sample.ipynb
       cwd: ../../samples
       type: notebook
       catalog: Notebook catalog
 
 - ``type`` = ``notebook``
-- ``source``: Path to the notebook (can be stored anywhere) which will be copied to the current working directory of *JupyterLab*. It can be an absolute path or a relative path to the directory of the configuration file. 
+- ``source``: Path to the notebook (can be stored anywhere) which will be copied to the current working directory of *JupyterLab*. It can be an absolute path or a relative path to the directory of the configuration file.
 - ``cwd``: Unused.
 
 .. figure:: images/notebook.gif
 
-   Notebook demo. 
+   Notebook demo.
 
 --------------------------------------
 Open a predefined markdown file
@@ -152,7 +152,7 @@ This launcher entry will render the content of a predefined markdown file.
 
     - title: Markdown example
       description: Example of opening a Markdown file in a tab
-      source: ../../samples/sample.md 
+      source: ../../samples/sample.md
       type: markdown
       catalog: Another catalog
 
@@ -162,18 +162,18 @@ This launcher entry will render the content of a predefined markdown file.
 
 .. figure:: images/markdown.gif
 
-   Markdown demo. 
+   Markdown demo.
 
 ----------------------------------------------
 Render a notebook in gridstack dashboard mode
 ----------------------------------------------
-This launcher entry will open a predefined notebook in the gridstack dashboard view. Users need to use the `jupyterlab-gridstack` extension to edit the layout of the dashboard and save the dashboard metadata. The launcher entry will read the metadata and then render the notebook with the saved layout. 
+This launcher entry will open a predefined notebook in the gridstack dashboard view. Users need to use the `jupyterlab-gridstack` extension to edit the layout of the dashboard and save the dashboard metadata. The launcher entry will read the metadata and then render the notebook with the saved layout.
 
 .. code-block:: yaml
 
     - title: Dashboard example
       description: Example of opening a notebook in dashboard mode without Voila
-      source: ../../samples/sample.ipynb 
+      source: ../../samples/sample.ipynb
       cwd: ../../samples
       type: notebook-grid
 
@@ -183,7 +183,7 @@ This launcher entry will open a predefined notebook in the gridstack dashboard v
 
 .. figure:: images/notebook-grid.gif
 
-   Notebook dashboard demo. 
+   Notebook dashboard demo.
 
 .. note::
   - This dashboard mode does not depend on `Voila`. It's a frontend-only approach and is a lightweight solution for dashboarding notebooks.
@@ -199,7 +199,7 @@ This launcher entry also renders the predefined notebook in dashboard mode but u
 
     - title: Voila example
       description: Example of opening a notebook in dashboard mode with Voila
-      source: ../../samples/sample.ipynb 
+      source: ../../samples/sample.ipynb
       cwd: ../../samples
       type: notebook-voila
       args:
@@ -211,11 +211,11 @@ This launcher entry also renders the predefined notebook in dashboard mode but u
 - ``type`` = ``notebook-voila``
 - ``source``: Path to the notebook file. It can be stored anywhere on your system and can be an absolute path or a relative path to the directory of the configuration file.
 - ``cwd``: Unused, `Voila` will be started in the same directory of the source notebook.
-- ``args``: The arguments list that will be passed to the `Voila` startup command. For example, in the code block above, ``--theme=dark`` and ``--template=gridstack`` will be passed to the `Voila` command. 
+- ``args``: The arguments list that will be passed to the `Voila` startup command. For example, in the code block above, ``--theme=dark`` and ``--template=gridstack`` will be passed to the `Voila` command.
 
 .. figure:: images/voila.gif
 
-   Voila demo. 
+   Voila demo.
 
 ---------------------------------------------------
 Start a local process and open the predefined URL.
@@ -225,7 +225,7 @@ This launcher entry will start a process with predefined commands and open a loc
 .. code-block:: yaml
 
   - title: Streamlit example
-    description: Example of opening a streamlit app 
+    description: Example of opening a streamlit app
     source: http://localhost:$PORT/
     cwd: ./
     type: local-server
@@ -238,16 +238,16 @@ This launcher entry will start a process with predefined commands and open a loc
     catalog: Another catalog
 
 - ``type`` = ``local-server``
-- ``args``: The command which will be executed inside a sub-process, defined as a list of arguments. For the web server applications that need to define the listening port, users can use the `PORT` variable. 
+- ``args``: The command which will be executed inside a sub-process, defined as a list of arguments. For the web server applications that need to define the listening port, users can use the `PORT` variable.
 - ``source``: The URL which will be opened after executing the command. *jupyter_app_launcher* will poll for the availability of the URL for 120 seconds. Environment variables inside URL will be substituted with the value of the variable.
 - ``cwd``: Current working directory of the subprocess.
 
 .. figure:: images/local-url.gif
 
-   Local server demo. 
+   Local server demo.
 
 .. note::
- *jupyter_app_launcher* uses the *jupyter-server-proxy* extension to expose the local URL, so using this entry type behind a reserve proxy server is straightforward. 
+ *jupyter_app_launcher* uses the *jupyter-server-proxy* extension to expose the local URL, so using this entry type behind a reserve proxy server is straightforward.
 
 --------------------------------------
 Open a remote URL.
@@ -274,7 +274,7 @@ This launcher entry will open the predefined URL in a new panel of JupyterLab by
 
 .. figure:: images/url.gif
 
-   URL demo. 
+   URL demo.
 
 --------------------------------------
 Run JupyterLab commands.
@@ -322,7 +322,7 @@ In the case of ``notebook-voila`` or ``local-server`` launcher entry, *jupyter_a
 Using *jupyter_app_launcher* with *JupyterLite*
 ======================================================
 
-*jupyter_app_launcher* is compatible with *JupyterLite*, but due to the limit of the lite kernel, the entry types using `subprocess` do not work in *JupyterLite*. 
+*jupyter_app_launcher* is compatible with *JupyterLite*, but due to the limit of the lite kernel, the entry types using `subprocess` do not work in *JupyterLite*.
 The available entry types in *JupyterLite* are: ``notebook``, ``notebook-grid``, ``markdown``, and ``url``. To use *jupyter_app_launcher*, users need to add the extension and the configuration file to the deployment.
 
 - To add *jupyter_app_launcher* extension to a *JupyterLite* website, users can refer to the official documentation here_.
@@ -344,4 +344,3 @@ Users can refer to the example on `project repository <https://github.com/trungl
 .. _`ipywidgets`: https://github.com/jupyter-widgets/ipywidgets/
 
 .. _here: https://jupyterlite.readthedocs.io/en/latest/howto/configure/simple_extensions.html#add-additional-extensions-to-a-jupyterlite-website
-

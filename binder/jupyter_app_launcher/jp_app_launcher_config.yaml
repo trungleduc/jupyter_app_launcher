@@ -1,46 +1,46 @@
 - title: Simply supported beam theory
   description: Simply supported beam computation
-  source: ../../samples/beam.md 
+  source: ../../samples/beam.md
   cwd: ../../samples
   type: markdown
   catalog: Simply supported beam computation
 
 - title: Simulation Dashboard
   description: Simply supported beam computation
-  source: ../../samples/beam.ipynb 
+  source: ../../samples/beam.ipynb
   cwd: ../../samples
   type: notebook-grid
   catalog: Simply supported beam computation
 
 - title: Simulation Notebook
   description: Simply supported beam computation
-  source: ../../samples/beam.ipynb 
+  source: ../../samples/beam.ipynb
   cwd: ../../samples
   type: notebook
   catalog: Simply supported beam computation
 
 - title: NVIDIA
   description: Nvidia stock dashboard
-  source: ../../samples/stock.ipynb 
+  source: ../../samples/stock.ipynb
   cwd: ../../samples
   type: notebook-grid
   catalog: Stock dashboard
 
 - title: Dashboard example
   description: Example of opening a notebook in dashboard mode without Voila
-  source: ../../samples/sample.ipynb 
+  source: ../../samples/sample.ipynb
   cwd: ../../samples
   type: notebook-grid
 
 - title: Notebook example
   description: Example of opening a notebook in dashboard mode without Voila
-  source: ../../samples/sample.ipynb 
+  source: ../../samples/sample.ipynb
   cwd: ../../samples
   type: notebook
 
 - title: Voila example
   description: Example of opening a notebook in dashboard mode with Voila
-  source: ../../samples/sample.ipynb 
+  source: ../../samples/sample.ipynb
   cwd: ../../samples
   type: notebook-voila
   args:
@@ -51,15 +51,22 @@
   source: https://jupyterlab.readthedocs.io/en/stable/
   type: url
   args:
-    sandbox: [ 'allow-same-origin', 'allow-scripts', 'allow-downloads', 'allow-modals', 'allow-popups']
+    sandbox:
+      [
+        'allow-same-origin',
+        'allow-scripts',
+        'allow-downloads',
+        'allow-modals',
+        'allow-popups'
+      ]
 
 - title: Markdown example
   description: Example of opening a Markdown file in a tab
-  source: ../../samples/sample.md 
+  source: ../../samples/sample.md
   type: markdown
 
 - title: Streamlit example
-  description: Example of opening a streamlit app 
+  description: Example of opening a streamlit app
   source: http://localhost:$PORT/
   cwd: ./
   type: local-server
