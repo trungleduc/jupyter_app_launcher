@@ -89,6 +89,7 @@ async function activate(
             content: wrapper,
             reveal: reveal.promise
           });
+          main.addClass('jp-Document');
           app.shell.add(main, 'main');
         }
         factory

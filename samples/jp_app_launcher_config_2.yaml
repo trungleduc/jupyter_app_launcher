@@ -5,6 +5,13 @@
   type: notebook
   catalog: Config 2
 
+- title: Markdown 
+  description: Example of opening a markdown file
+  source: ./beam.md
+  cwd: '.'
+  type: markdown
+  catalog: Config 2
+
 - title: Command example 2
   description: Example of calling JupyterLab commands
   type: jupyterlab-commands

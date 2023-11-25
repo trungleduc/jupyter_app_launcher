@@ -12,7 +12,7 @@ export class URLFactory implements IPanelFactory {
     args: IDict
   ): Promise<ILauncherApp | void> {
     const source = config.source as string;
-    if (!(typeof source !== 'string')) {
+    if (typeof source !== 'string') {
       return;
     }
     const instanceId = UUID.uuid4();
