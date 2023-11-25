@@ -71,7 +71,10 @@ async function activate(
         const reveal = new PromiseDelegate<void>();
 
         let skipMainAreaWidget = false;
-        if (config.type === 'notebook') {
+        if (
+          config.type === 'notebook' ||
+          config.type === 'jupyterlab-commands'
+        ) {
           skipMainAreaWidget = true;
         } else if (
           config.type === 'url' &&

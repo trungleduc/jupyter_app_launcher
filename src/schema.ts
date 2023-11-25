@@ -10,7 +10,7 @@ export interface ILauncherConfiguration {
   description?: string;
   icon?: string;
   id: string;
-  source: string;
+  source: string | ICommandSchema[];
   sourceCode?: string;
   cwd?: string;
   type:
@@ -19,11 +19,21 @@ export interface ILauncherConfiguration {
     | 'notebook-voila'
     | 'markdown'
     | 'local-server'
-    | 'url';
+    | 'url'
+    | 'jupyterlab-commands';
   catalog?: string;
   args?:
     | {
         [k: string]: any;
       }
     | any[];
+}
+/**
+ * This interface was referenced by `ILauncherConfiguration`'s JSON-Schema
+ * via the `definition` "commandSchema".
+ */
+export interface ICommandSchema {
+  label: string;
+  id: string;
+  args: any;
 }
