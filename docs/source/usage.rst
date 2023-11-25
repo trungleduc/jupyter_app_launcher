@@ -2,7 +2,7 @@
 Usage
 =============
 
-*jupyter_app_launcher* relies on a *YAML* file to create and add entries to the launcher. Depending on the type of entry, different parameters are required.
+*jupyter_app_launcher* relies on *YAML* files to create and add entries to the launcher. Depending on the type of entry, different parameters are required.
 
 Configuration file location
 ==========================================
@@ -96,6 +96,20 @@ The YAML file should contain an array of objects, *jupyter_app_launcher* will cr
         - st_app.py
         - --server.headless=true
         - --server.port=$PORT
+      catalog: Another catalog
+
+    - title: Command example
+      description: Example of calling JupyterLab commands
+      type: jupyterlab-commands
+      source:
+        - label: Command 1
+          id: 'filebrowser:open-path'
+          args:
+            path: sample.ipynb
+        - label: Command 2
+          id: 'filebrowser:open-path'
+          args:
+            path: sample-2.ipynb
       catalog: Another catalog
 
 The common fields of the configurations are: ``title``, ``description``  ``icon`` and ``catalog``.
@@ -262,7 +276,40 @@ This launcher entry will open the predefined URL in a new panel of JupyterLab by
 
    URL demo. 
 
-Running subprocesses
+--------------------------------------
+Run JupyterLab commands.
+--------------------------------------
+
+This launcher entry will run predefined JupyterLab commands.
+
+.. code-block:: yaml
+
+    - title: Command example 2
+      description: Example of calling JupyterLab commands
+      type: jupyterlab-commands
+      source:
+        - label: Command 1
+          id: 'filebrowser:open-path'
+          args:
+            path: sample.ipynb
+        - label: Command 2
+          id: 'another-jupyterlab-command-id'
+          args: my-args
+      catalog: Config 2
+
+- ``type`` = ``jupyterlab-commands``
+- ``source``: The list of JupyterLab commands to be called. Each command is defined by 3 property:
+
+  - ``label``: The user-defined label of the command.
+  - ``id``: The id of the JupyterLab command.
+  - ``args``: The arguments to be passed "as-is" to the command.
+
+- ``args``: Unused.
+- ``cwd``: Unused.
+
+The execution of commands will be stopped if a command fails, and the error message will be shown in a dialog.
+
+Running subprocesses manager
 ======================================================
 
 In the case of ``notebook-voila`` or ``local-server`` launcher entry, *jupyter_app_launcher* will start the corresponding process in a subprocess. Users can keep track and shut down running subprocesses by using the **Launcher Application** section in the running panel of *JupyterLab*

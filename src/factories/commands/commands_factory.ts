@@ -17,6 +17,7 @@ export class CommandsFactory implements IPanelFactory {
         await this._commands.execute(cmd.id, cmd.args);
       } catch (error) {
         await showErrorMessage(`${cmd.label}: Error`, error as string);
+        break;
       }
     }
     return;
