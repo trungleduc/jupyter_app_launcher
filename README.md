@@ -1,6 +1,6 @@
 <h1 align="center">jupyter_app_launcher</h1>
 
-[![Github Actions Status](https://github.com/trungleduc/jupyter_app_launcher/workflows/Build/badge.svg)](https://github.com/trungleduc/jupyter_app_launcher/actions/workflows/build.yml) [![Documentation Status](https://readthedocs.org/projects/jupyter-app-launcher/badge/?version=latest)](https://jupyter-app-launcher.readthedocs.io/en/latest/?badge=latest) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trungleduc/jupyter_app_launcher/main?urlpath=lab) [![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://trungleduc.github.io/jupyter_app_launcher/lab/index.html)
+[![Github Actions Status](https://github.com/trungleduc/jupyter_app_launcher/actions/workflows/build.yml/badge.svg)](https://github.com/trungleduc/jupyter_app_launcher/actions/workflows/build.yml) [![Documentation Status](https://readthedocs.org/projects/jupyter-app-launcher/badge/?version=latest)](https://jupyter-app-launcher.readthedocs.io/en/latest/?badge=latest) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trungleduc/jupyter_app_launcher/main?urlpath=lab) [![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://trungleduc.github.io/jupyter_app_launcher/lab/index.html)
 
 <h2 align="center"> A JupyterLab extension to create custom launcher entries </h2>
 
