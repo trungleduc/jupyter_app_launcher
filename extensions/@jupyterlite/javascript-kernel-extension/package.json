@@ -1,6 +1,6 @@
 {
   "name": "@jupyterlite/javascript-kernel-extension",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "JupyterLite - JavaScript Kernel Extension",
   "homepage": "https://github.com/jupyterlite/jupyterlite",
   "bugs": {
@@ -40,9 +40,9 @@
   },
   "dependencies": {
     "@jupyterlab/coreutils": "~6.0.7",
-    "@jupyterlite/javascript-kernel": "^0.2.0",
-    "@jupyterlite/kernel": "^0.2.0",
-    "@jupyterlite/server": "^0.2.0"
+    "@jupyterlite/javascript-kernel": "^0.2.1",
+    "@jupyterlite/kernel": "^0.2.1",
+    "@jupyterlite/server": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -61,7 +61,7 @@
     "extension": true,
     "outputDir": "jupyterlite_javascript_kernel/labextension",
     "_build": {
-      "load": "static/remoteEntry.1d5a607f7ce2715cd56c.js",
+      "load": "static/remoteEntry.d32483ece0ef677860da.js",
       "extension": "./extension"
     }
   },

@@ -327,6 +327,16 @@ export async function main() {
       console.error(e);
     }
   }
+  if (!federatedExtensionNames.has('@jupyterlab/markdownviewer-extension')) {
+    try {
+      let ext = require('@jupyterlab/markdownviewer-extension');
+      for (let plugin of activePlugins(ext)) {
+        pluginsToRegister.push(plugin);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
   if (!federatedExtensionNames.has('@jupyterlab/markedparser-extension')) {
     try {
       let ext = require('@jupyterlab/markedparser-extension');
