@@ -12,7 +12,7 @@ export class NotebookFactory implements IPanelFactory {
       return;
     }
     const app = this.options.app;
-    if (args['copy'] === false) {
+    if (config.copy === false) {
       const doc: NotebookPanel = await app.commands.execute('docmanager:open', {
         path: args['path'],
         factory: 'Notebook',
