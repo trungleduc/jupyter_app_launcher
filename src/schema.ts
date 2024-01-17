@@ -13,6 +13,7 @@ export interface ILauncherConfiguration {
   source: string;
   sourceCode?: string;
   cwd?: string;
+  copy?: boolean;
   type:
     | 'notebook'
     | 'notebook-grid'

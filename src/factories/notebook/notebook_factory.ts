@@ -11,37 +11,47 @@ export class NotebookFactory implements IPanelFactory {
     if (!config.sourceCode) {
       return;
     }
-    const cwd = args['cwd'];
     const app = this.options.app;
-    const model: Contents.IModel = await app.commands.execute(
-      'docmanager:new-untitled',
-      {
-        path: cwd,
-        type: 'notebook',
-        ext: '.ipynb'
+    if (args['copy'] === false) {
+      const doc: NotebookPanel = await app.commands.execute('docmanager:open', {
+        path: args['path'],
+        factory: 'Notebook',
+      });
+      await doc.context.ready;
+      await doc.sessionContext.ready;
+      doc.content.activeCellIndex = 1;
+    } else {
+      const cwd = args['cwd'];
+      const model: Contents.IModel = await app.commands.execute(
+        'docmanager:new-untitled',
+        {
+          path: cwd,
+          type: 'notebook',
+          ext: '.ipynb'
+        }
+      );
+      const doc: NotebookPanel = await app.commands.execute('docmanager:open', {
+        path: model.path
+      });
+      await doc.context.ready;
+      doc.context.model.fromString(config.sourceCode);
+      doc.context.model.initialize();
+      let renamed = false;
+      let index = 0;
+      while (!renamed) {
+        try {
+          await doc.context.rename(
+            `${config.title}${index === 0 ? '' : '-' + index}.ipynb`
+          );
+          renamed = true;
+        } catch {
+          index += 1;
+        }
       }
-    );
-    const doc: NotebookPanel = await app.commands.execute('docmanager:open', {
-      path: model.path
-    });
-    await doc.context.ready;
-    doc.context.model.fromString(config.sourceCode);
-    doc.context.model.initialize();
-    let renamed = false;
-    let index = 0;
-    while (!renamed) {
-      try {
-        await doc.context.rename(
-          `${config.title}${index === 0 ? '' : '-' + index}.ipynb`
-        );
-        renamed = true;
-      } catch {
-        index += 1;
-      }
+      await doc.context.save();
+      await doc.sessionContext.ready;
+      doc.content.activeCellIndex = 1;
     }
-    await doc.context.save();
-    await doc.sessionContext.ready;
-    doc.content.activeCellIndex = 1;
   }
 }
 
