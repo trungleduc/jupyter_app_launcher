@@ -45,6 +45,9 @@
                     "type": "array"
                 }
             ]
+        },
+        "copy": {
+            "type": "boolean"
         }
     },
     "required": [
