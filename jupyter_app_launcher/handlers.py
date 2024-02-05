@@ -87,9 +87,9 @@ class JupyterAppLauncher(APIHandler):
 
                     manager = JupyterAppLauncher.handler_factory_manager
                     for item in ret:
-                        JupyterAppLauncher.launcher_handler[
-                            item["id"]
-                        ] = manager.create_factory(item["type"], item)
+                        JupyterAppLauncher.launcher_handler[item["id"]] = (
+                            manager.create_factory(item["type"], item)
+                        )
                     JupyterAppLauncher.config_data.extend(ret)
         JupyterAppLauncher.checked_data = True
 
