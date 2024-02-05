@@ -1,6 +1,6 @@
 {
   "name": "jupyter-leaflet",
-  "version": "0.18.1",
+  "version": "0.18.2",
   "description": "jupyter - leaflet bridge",
   "keywords": [
     "jupyter",
@@ -76,10 +76,13 @@
       "@jupyter-widgets/base": {
         "bundled": false,
         "singleton": true
+      },
+      "leaflet": {
+        "singleton": true
       }
     },
     "_build": {
-      "load": "static/remoteEntry.ec70cfda4bf533e5ef95.js",
+      "load": "static/remoteEntry.5e71a5e8dcb6330c0085.js",
       "extension": "./extension"
     }
   }

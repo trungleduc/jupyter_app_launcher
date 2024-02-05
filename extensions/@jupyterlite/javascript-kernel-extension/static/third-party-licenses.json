@@ -2,19 +2,19 @@
   "packages": [
     {
       "name": "@jupyterlab/services",
-      "versionInfo": "7.0.9",
+      "versionInfo": "7.0.11",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/javascript-kernel",
-      "versionInfo": "0.2.2",
+      "versionInfo": "0.2.3",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/kernel",
-      "versionInfo": "0.2.2",
+      "versionInfo": "0.2.3",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
