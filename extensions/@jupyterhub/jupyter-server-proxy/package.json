@@ -1,6 +1,6 @@
 {
   "name": "@jupyterhub/jupyter-server-proxy",
-  "version": "4.1.0",
+  "version": "4.1.2",
   "description": "A JupyterLab extension accompanying the PyPI package jupyter-server-proxy adding launcher items for configured server processes.",
   "keywords": [
     "jupyter",
@@ -60,7 +60,7 @@
     "extension": true,
     "outputDir": "../jupyter_server_proxy/labextension",
     "_build": {
-      "load": "static/remoteEntry.efd2da6d46ebaed03028.js",
+      "load": "static/remoteEntry.1d058ab1c1661989f918.js",
       "extension": "./extension"
     }
   }
