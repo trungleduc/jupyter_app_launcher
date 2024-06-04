@@ -1,6 +1,6 @@
 {
   "name": "jupyter-leaflet",
-  "version": "0.19.0",
+  "version": "0.19.1",
   "description": "jupyter - leaflet bridge",
   "keywords": [
     "jupyter",
@@ -10,7 +10,8 @@
   ],
   "files": [
     "css/",
-    "lib/"
+    "lib/",
+    "dist/"
   ],
   "repository": {
     "type": "git",
@@ -109,7 +110,7 @@
       }
     },
     "_build": {
-      "load": "static/remoteEntry.5967b8178f34eeb1616d.js",
+      "load": "static/remoteEntry.6bf4fd5d409944e9ace5.js",
       "extension": "./extension"
     }
   }
