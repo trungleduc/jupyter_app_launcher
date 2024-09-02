@@ -87,3 +87,8 @@ ignore = ["W002"]
 
 [project.scripts]
 jupyter-app_launcher = "jupyter_app_launcher.script:build_lite"
+
+[tool.ruff]
+extend-exclude = [
+    "*.ipynb",
+]
