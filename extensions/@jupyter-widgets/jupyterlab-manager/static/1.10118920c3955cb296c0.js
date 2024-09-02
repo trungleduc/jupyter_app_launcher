@@ -1,0 +1,1 @@
+(self.webpackChunk_jupyter_widgets_jupyterlab_manager=self.webpackChunk_jupyter_widgets_jupyterlab_manager||[]).push([[1],{8001:(e,t,a)=>{"use strict";a.d(t,{N:()=>s});const s="1.5.0"}}]);
