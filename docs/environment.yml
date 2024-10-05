@@ -5,7 +5,7 @@ dependencies:
   - python=3.*
   - nodejs
   - jupyter_sphinx
-  - sphinx
+  - sphinx<8
   - pydata-sphinx-theme
   - nbsphinx
   - nbsphinx-link
