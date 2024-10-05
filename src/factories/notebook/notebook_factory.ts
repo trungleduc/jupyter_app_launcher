@@ -1,6 +1,8 @@
 import { JupyterFrontEnd } from '@jupyterlab/application';
-import { NotebookPanel } from '@jupyterlab/notebook';
 import { IDocumentManager } from '@jupyterlab/docmanager';
+import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
+import { NotebookPanel } from '@jupyterlab/notebook';
+
 import { ILauncherConfiguration } from '../../schema';
 import { IDict, IPanelFactory } from '../../token';
 
@@ -10,36 +12,37 @@ export class NotebookFactory implements IPanelFactory {
     if (!config.sourceCode) {
       return;
     }
-    const { documentManager } = this.options;
-    const cwd = args['cwd'];
-    const app = this.options.app;
+    const { documentManager, fileBrowser } = this.options;
 
-    const model = await documentManager.newUntitled({
-      path: cwd,
-      type: 'notebook',
-      ext: '.ipynb'
-    });
-    let renamed = false;
+    let found = false;
     let index = 0;
-    let newName = model.path;
-    while (!renamed) {
-      try {
-        newName = `${config.title}${index === 0 ? '' : '-' + index}.ipynb`;
-        await documentManager.rename(model.path, newName);
-        renamed = true;
-      } catch {
+    let newName = config.title;
+    const allFiles = new Set([...fileBrowser.model.items()].map(it => it.name));
+    while (!found) {
+      newName = `${config.title}${index === 0 ? '' : '-' + index}.ipynb`;
+      if (!allFiles.has(newName)) {
+        found = true;
+      } else {
         index += 1;
       }
     }
-    const doc: NotebookPanel = await app.commands.execute('docmanager:open', {
-      path: newName
-    });
+    const fileBlob = new File([config.sourceCode], newName);
+    await fileBrowser.model.upload(fileBlob);
+    const configArgs: IDict = config.args ?? {};
+    const factory = configArgs['widget-type'] ?? 'default';
+    const doc = await documentManager.openOrReveal(newName, factory);
+    if (!doc) {
+      console.error(`Failed to create widget with ${factory} factory`);
+      return;
+    }
     await doc.context.ready;
     doc.context.model.fromString(config.sourceCode);
 
     await doc.context.save();
-    await doc.sessionContext.ready;
-    doc.content.activeCellIndex = 1;
+    if (doc instanceof NotebookPanel) {
+      await doc.sessionContext.ready;
+      doc.content.activeCellIndex = 1;
+    }
   }
 }
 
@@ -47,5 +50,6 @@ export namespace NotebookFactory {
   export interface IOptions {
     app: JupyterFrontEnd;
     documentManager: IDocumentManager;
+    fileBrowser: IDefaultFileBrowser;
   }
 }

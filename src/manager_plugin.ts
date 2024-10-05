@@ -6,7 +6,7 @@ import { IEditorServices } from '@jupyterlab/codeeditor';
 import { INotebookTracker, NotebookPanel } from '@jupyterlab/notebook';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { IThemeManager } from '@jupyterlab/apputils';
-
+import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
 import { CommandsFactory } from './factories/commands';
 import { LocalServerFactory } from './factories/local_server';
 import { MarkdownFactory } from './factories/markdown';
@@ -27,7 +27,8 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     INotebookTracker,
     IEditorServices,
     NotebookPanel.IContentFactory,
-    IDocumentManager
+    IDocumentManager,
+    IDefaultFileBrowser
   ],
   optional: [IThemeManager],
   activate: (
@@ -37,6 +38,7 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     editorServices: IEditorServices,
     contentFactory: NotebookPanel.IContentFactory,
     documentManager: IDocumentManager,
+    fileBrowser: IDefaultFileBrowser,
     themeManager?: IThemeManager
   ): IPanelFactoryManager => {
     const manager = new PanelFactoryManager();
@@ -52,7 +54,8 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
 
     const notebookFactory = new NotebookFactory({
       app,
-      documentManager
+      documentManager,
+      fileBrowser
     });
     manager.registerFactory('notebook', notebookFactory);
 

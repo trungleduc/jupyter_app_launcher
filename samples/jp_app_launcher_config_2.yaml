@@ -1,6 +1,8 @@
 - title: Notebook example in config 2
-  description: Example of opening a notebook in dashboard mode without Voila
+  description: Example of opening a notebook with Voila Preview
   source: ./sample.ipynb
+  args:
+    widget-type: 'Voila Preview'
   cwd: '.'
   type: notebook
   catalog: Config 2
