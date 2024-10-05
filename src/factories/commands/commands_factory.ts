@@ -11,7 +11,7 @@ export class CommandsFactory implements IPanelFactory {
     config: ILauncherConfiguration,
     args: IDict
   ): Promise<ILauncherApp | void> {
-    const source = config.source as any as ICommandSchema[];
+    const source = config.source as ICommandSchema[];
     for (const cmd of source) {
       try {
         await this._commands.execute(cmd.id, cmd.args);

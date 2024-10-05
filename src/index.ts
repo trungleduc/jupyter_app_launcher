@@ -46,7 +46,6 @@ async function activate(
   const appName = PageConfig.getOption('appName');
   const widgetTracker = new AppTracker({ namespace }, appName);
   const launcherData = await fetchLauncherData(appName);
-
   function createCommand(config: ILauncherConfiguration, idx: number): void {
     let icon: LabIcon;
     if (config.icon) {

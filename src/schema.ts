@@ -20,7 +20,8 @@ export interface ILauncherConfiguration {
     | 'markdown'
     | 'local-server'
     | 'url'
-    | 'jupyterlab-commands';
+    | 'jupyterlab-commands'
+    | 'terminal';
   catalog?: string;
   args?:
     | {

@@ -63,6 +63,7 @@
         "@jupyterlab/notebook": "^4.0.0",
         "@jupyterlab/running": "^4.0.0",
         "@jupyterlab/services": "^7.0.0",
+        "@jupyterlab/terminal": "^4.2.5",
         "gridstack": "^6.0.1"
     },
     "devDependencies": {
@@ -135,6 +136,7 @@
             "@typescript-eslint"
         ],
         "rules": {
+            "no-constant-condition": "off",
             "@typescript-eslint/naming-convention": [
                 "error",
                 {

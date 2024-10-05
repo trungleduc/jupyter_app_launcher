@@ -22,3 +22,12 @@
         path: sample.ipynb
   cwd: '.'
   catalog: Config 2
+
+- title: Terminal
+  description: Example of opening the terminal
+  source: 'ls -l'
+  args:
+    reuse: false
+  cwd: '../'
+  type: terminal
+  catalog: Config 2
