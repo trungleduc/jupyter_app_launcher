@@ -130,13 +130,16 @@ This launcher entry will create a new notebook in the current working directory 
 
     - title: Notebook example
       description: Example of opening a notebook in dashboard mode without Voila
+      type: notebook
       source: ../../samples/sample.ipynb
       cwd: ../../samples
-      type: notebook
+      args:
+        widget-type: 'default'
       catalog: Notebook catalog
 
 - ``type`` = ``notebook``
 - ``source``: Path to the notebook (can be stored anywhere) which will be copied to the current working directory of *JupyterLab*. It can be an absolute path or a relative path to the directory of the configuration file.
+- ``args`` (Optional): By default the notebook will be opened with the default notebook view. Users can customize the document widget to open the notebook by setting the ``widget-type`` argument. For example, to open the notebook with the Voila preview widget, set ``widget-type`` to ``Voila Preview``.
 - ``cwd``: Unused.
 
 .. figure:: images/notebook.gif
@@ -308,6 +311,30 @@ This launcher entry will run predefined JupyterLab commands.
 - ``cwd``: Unused.
 
 The execution of commands will be stopped if a command fails, and the error message will be shown in a dialog.
+
+
+--------------------------------------
+Open JupyterLab terminal.
+--------------------------------------
+
+This launcher entry will open JupyterLab terminal and execute the defined command.
+
+.. code-block:: yaml
+
+    - title: Terminal example
+      description: Example of opening JupyterLab terminal
+      type: terminal
+      source: 'ls -l'
+      cwd: '../'
+      args:
+        reuse: true
+      catalog: Config 2
+
+- ``type`` = ``terminal``
+- ``source``: the command to be executed at startup
+- ``cwd``: The CWD of the terminal. It can be an absolute path or a relative path to the CWD of JupyterLab.
+- ``args`` (Optional): By default the terminal session will be created independently, set ``reuse`` to ``true`` to use the same terminal session.
+
 
 Running subprocesses manager
 ======================================================
