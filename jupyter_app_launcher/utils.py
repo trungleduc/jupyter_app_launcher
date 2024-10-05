@@ -64,7 +64,7 @@ def validate_data(data: Dict, cwd: str) -> bool:
         else:
             if source_config is not None:
                 data["sourceCode"] = path_to_res(source_config, cwd)
-            if type_config not in ["url", "local-server"]:
+            if type_config not in ["url", "local-server", "terminal"]:
                 data["source"] = create_abs_path(source_config, cwd)
             if type_config == "url":
                 data["source"] = os.path.expandvars(source_config)

@@ -1,6 +1,8 @@
 - title: Notebook example in config 2
-  description: Example of opening a notebook in dashboard mode without Voila
+  description: Example of opening a notebook with Voila Preview
   source: ./sample.ipynb
+  args:
+    widget-type: 'Voila Preview'
   cwd: '.'
   type: notebook
   catalog: Config 2
@@ -21,4 +23,13 @@
       args:
         path: sample.ipynb
   cwd: '.'
+  catalog: Config 2
+
+- title: Terminal
+  description: Example of opening the terminal
+  source: 'ls -l'
+  args:
+    reuse: false
+  cwd: '../'
+  type: terminal
   catalog: Config 2

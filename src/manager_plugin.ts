@@ -1,4 +1,3 @@
-import { NotebookVoilaFactory } from './factories/notebook_voila/notebook_voila_factory';
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
@@ -6,15 +5,19 @@ import {
 import { IEditorServices } from '@jupyterlab/codeeditor';
 import { INotebookTracker, NotebookPanel } from '@jupyterlab/notebook';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
-
-import { NotebookFactory } from './factories/notebook/notebook_factory';
-import { NotebookGridFactory } from './factories/notebook_grid/notebook_grid_factory';
+import { IThemeManager } from '@jupyterlab/apputils';
+import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
+import { CommandsFactory } from './factories/commands';
+import { LocalServerFactory } from './factories/local_server';
+import { MarkdownFactory } from './factories/markdown';
+import { NotebookFactory } from './factories/notebook';
+import { NotebookGridFactory } from './factories/notebook_grid';
+import { NotebookVoilaFactory } from './factories/notebook_voila';
+import { TerminalFactory } from './factories/terminal';
+import { URLFactory } from './factories/url/url_factory';
 import { PanelFactoryManager } from './factory_manager';
 import { IPanelFactoryManager } from './token';
-import { LocalServerFactory } from './factories/local_server/local_server_factory';
-import { CommandsFactory } from './factories/commands/commands_factory';
-import { URLFactory } from './factories/url/url_factory';
-import { MarkdownFactory } from './factories/markdown/markdown_factory';
+import { IDocumentManager } from '@jupyterlab/docmanager';
 
 export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
   id: 'jupyter_app_launcher:panel-factory-manager',
@@ -23,14 +26,20 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     IRenderMimeRegistry,
     INotebookTracker,
     IEditorServices,
-    NotebookPanel.IContentFactory
+    NotebookPanel.IContentFactory,
+    IDocumentManager,
+    IDefaultFileBrowser
   ],
+  optional: [IThemeManager],
   activate: (
     app: JupyterFrontEnd,
     rendermime: IRenderMimeRegistry,
     tracker: INotebookTracker,
     editorServices: IEditorServices,
-    contentFactory: NotebookPanel.IContentFactory
+    contentFactory: NotebookPanel.IContentFactory,
+    documentManager: IDocumentManager,
+    fileBrowser: IDefaultFileBrowser,
+    themeManager?: IThemeManager
   ): IPanelFactoryManager => {
     const manager = new PanelFactoryManager();
     const notebookGridFactory = new NotebookGridFactory({
@@ -44,7 +53,9 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     manager.registerFactory('notebook-grid', notebookGridFactory);
 
     const notebookFactory = new NotebookFactory({
-      app
+      app,
+      documentManager,
+      fileBrowser
     });
     manager.registerFactory('notebook', notebookFactory);
 
@@ -67,6 +78,10 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
       commands: app.commands
     });
     manager.registerFactory('jupyterlab-commands', cmdFactory);
+
+    const terminalFactory = new TerminalFactory({ app, themeManager });
+    manager.registerFactory('terminal', terminalFactory);
+
     return manager;
   },
   provides: IPanelFactoryManager
