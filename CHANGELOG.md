@@ -2,6 +2,28 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.0
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.2.1...ff8e92cf6b96be1dabe8c256f1b36527b4f3dfc1))
+
+### Enhancements made
+
+- Update new features [#70](https://github.com/trungleduc/jupyter_app_launcher/pull/70) ([@trungleduc](https://github.com/trungleduc))
+
+### Maintenance and upkeep improvements
+
+### Documentation improvements
+
+- Update rtd build [#49](https://github.com/trungleduc/jupyter_app_launcher/pull/49) ([@trungleduc](https://github.com/trungleduc))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2023-11-25&to=2024-10-05&type=c))
+
+[@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2023-11-25..2024-10-05&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Apre-commit-ci+updated%3A2023-11-25..2024-10-05&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2023-11-25..2024-10-05&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.1
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.2.0...f13e6b58a283946d7652a2126fb5006854ffaf46))
@@ -15,8 +37,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2023-11-25&to=2023-11-25&type=c))
 
 [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2023-11-25..2023-11-25&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.0
 
