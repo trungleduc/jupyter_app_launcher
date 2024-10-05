@@ -1,6 +1,6 @@
 {
   "name": "jupyter_app_launcher",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A JupyterLab extension.",
   "keywords": [
     "jupyter",
@@ -114,7 +114,7 @@
     "extension": true,
     "outputDir": "jupyter_app_launcher/labextension",
     "_build": {
-      "load": "static/remoteEntry.4b531db5e438cb9cb56e.js",
+      "load": "static/remoteEntry.1946fcf95f53adb5ce07.js",
       "extension": "./extension",
       "style": "./style"
     }
