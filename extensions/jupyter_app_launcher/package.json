@@ -63,6 +63,7 @@
     "@jupyterlab/notebook": "^4.0.0",
     "@jupyterlab/running": "^4.0.0",
     "@jupyterlab/services": "^7.0.0",
+    "@jupyterlab/terminal": "^4.2.5",
     "gridstack": "^6.0.1"
   },
   "devDependencies": {
@@ -113,7 +114,7 @@
     "extension": true,
     "outputDir": "jupyter_app_launcher/labextension",
     "_build": {
-      "load": "static/remoteEntry.5c474c67758b4ef3d2fc.js",
+      "load": "static/remoteEntry.4b531db5e438cb9cb56e.js",
       "extension": "./extension",
       "style": "./style"
     }
@@ -140,6 +141,7 @@
       "@typescript-eslint"
     ],
     "rules": {
+      "no-constant-condition": "off",
       "@typescript-eslint/naming-convention": [
         "error",
         {
