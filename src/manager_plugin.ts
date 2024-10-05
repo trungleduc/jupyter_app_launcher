@@ -7,16 +7,17 @@ import { INotebookTracker, NotebookPanel } from '@jupyterlab/notebook';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { IThemeManager } from '@jupyterlab/apputils';
 
-import { CommandsFactory } from './factories/commands/commands_factory';
-import { LocalServerFactory } from './factories/local_server/local_server_factory';
-import { MarkdownFactory } from './factories/markdown/markdown_factory';
-import { NotebookFactory } from './factories/notebook/notebook_factory';
-import { NotebookGridFactory } from './factories/notebook_grid/notebook_grid_factory';
-import { NotebookVoilaFactory } from './factories/notebook_voila/notebook_voila_factory';
-import { TerminalFactory } from './factories/terminal/terminal_factory';
+import { CommandsFactory } from './factories/commands';
+import { LocalServerFactory } from './factories/local_server';
+import { MarkdownFactory } from './factories/markdown';
+import { NotebookFactory } from './factories/notebook';
+import { NotebookGridFactory } from './factories/notebook_grid';
+import { NotebookVoilaFactory } from './factories/notebook_voila';
+import { TerminalFactory } from './factories/terminal';
 import { URLFactory } from './factories/url/url_factory';
 import { PanelFactoryManager } from './factory_manager';
 import { IPanelFactoryManager } from './token';
+import { IDocumentManager } from '@jupyterlab/docmanager';
 
 export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
   id: 'jupyter_app_launcher:panel-factory-manager',
@@ -25,7 +26,8 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     IRenderMimeRegistry,
     INotebookTracker,
     IEditorServices,
-    NotebookPanel.IContentFactory
+    NotebookPanel.IContentFactory,
+    IDocumentManager
   ],
   optional: [IThemeManager],
   activate: (
@@ -34,6 +36,7 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     tracker: INotebookTracker,
     editorServices: IEditorServices,
     contentFactory: NotebookPanel.IContentFactory,
+    documentManager: IDocumentManager,
     themeManager?: IThemeManager
   ): IPanelFactoryManager => {
     const manager = new PanelFactoryManager();
@@ -48,7 +51,8 @@ export const panelFactoryPlugin: JupyterFrontEndPlugin<IPanelFactoryManager> = {
     manager.registerFactory('notebook-grid', notebookGridFactory);
 
     const notebookFactory = new NotebookFactory({
-      app
+      app,
+      documentManager
     });
     manager.registerFactory('notebook', notebookFactory);
 
