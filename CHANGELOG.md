@@ -2,6 +2,24 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.1
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.3.0...85c4f796bdb42bb7867a7c1cad7faa8d4b8c7561))
+
+### Bugs fixed
+
+- Use full path when creating new notebook  [#73](https://github.com/trungleduc/jupyter_app_launcher/pull/73) ([@mwcraig](https://github.com/mwcraig))
+
+### Maintenance and upkeep improvements
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2024-10-05&to=2024-11-02&type=c))
+
+[@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2024-10-05..2024-11-02&type=Issues) | [@mwcraig](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Amwcraig+updated%3A2024-10-05..2024-11-02&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Apre-commit-ci+updated%3A2024-10-05..2024-11-02&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2024-10-05..2024-11-02&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.3.0
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.2.1...ff8e92cf6b96be1dabe8c256f1b36527b4f3dfc1))
@@ -21,8 +39,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2023-11-25&to=2024-10-05&type=c))
 
 [@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2023-11-25..2024-10-05&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Apre-commit-ci+updated%3A2023-11-25..2024-10-05&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2023-11-25..2024-10-05&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.1
 
