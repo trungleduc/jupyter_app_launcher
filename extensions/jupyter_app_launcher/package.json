@@ -114,7 +114,7 @@
     "extension": true,
     "outputDir": "jupyter_app_launcher/labextension",
     "_build": {
-      "load": "static/remoteEntry.1946fcf95f53adb5ce07.js",
+      "load": "static/remoteEntry.dd12c7784542c3d8507b.js",
       "extension": "./extension",
       "style": "./style"
     }
