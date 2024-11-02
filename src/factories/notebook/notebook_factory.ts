@@ -30,7 +30,8 @@ export class NotebookFactory implements IPanelFactory {
     await fileBrowser.model.upload(fileBlob);
     const configArgs: IDict = config.args ?? {};
     const factory = configArgs['widget-type'] ?? 'default';
-    const doc = await documentManager.openOrReveal(newName, factory);
+    const newPath = `${fileBrowser.model.path}/${newName}`;
+    const doc = await documentManager.openOrReveal(newPath, factory);
     if (!doc) {
       console.error(`Failed to create widget with ${factory} factory`);
       return;
