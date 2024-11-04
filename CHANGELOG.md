@@ -8,7 +8,7 @@
 
 ### Bugs fixed
 
-- Use full path when creating new notebook  [#73](https://github.com/trungleduc/jupyter_app_launcher/pull/73) ([@mwcraig](https://github.com/mwcraig))
+- Use full path when creating new notebook [#73](https://github.com/trungleduc/jupyter_app_launcher/pull/73) ([@mwcraig](https://github.com/mwcraig))
 
 ### Maintenance and upkeep improvements
 
