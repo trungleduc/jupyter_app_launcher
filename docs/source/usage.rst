@@ -138,7 +138,7 @@ This launcher entry will create a new notebook in the current working directory 
       catalog: Notebook catalog
 
 - ``type`` = ``notebook``
-- ``source``: Path to the notebook (can be stored anywhere) which will be copied to the current working directory of *JupyterLab*. It can be an absolute path or a relative path to the directory of the configuration file.
+- ``source``: Path to the notebook (can be stored anywhere) which will be copied to the current working directory of *JupyterLab*. It can be an absolute path or a relative path to the directory of the configuration file. Setting this to ``./`` makes voila open its own file browser when launched which allows notebook to be selected.
 - ``args`` (Optional): By default the notebook will be opened with the default notebook view. Users can customize the document widget to open the notebook by setting the ``widget-type`` argument. For example, to open the notebook with the Voila preview widget, set ``widget-type`` to ``Voila Preview``.
 - ``cwd``: Unused.
 
