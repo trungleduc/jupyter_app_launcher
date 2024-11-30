@@ -6,13 +6,30 @@ import { requestAPI } from '../../handler';
 import { ILauncherConfiguration } from '../../schema';
 import { IDict, IPanelFactory } from '../../token';
 import { ILauncherApp } from './../../token';
+import { Dialog } from '@jupyterlab/apputils';
+
+function showTemporaryPopup(title : string) {
+    const dialog = new Dialog({
+        title: 'Loading',
+        body: 'Please wait a few seconds until ' + title + ' has started...',
+        buttons: []
+    });
+
+    // Show the dialog
+    dialog.launch();
+
+    // Close the dialog after 3 seconds
+    setTimeout(() => {
+        dialog.dispose();
+    }, 3000);
+} 
 
 export class LocalServerFactory implements IPanelFactory {
   async create(
     config: ILauncherConfiguration,
     args: IDict
-  ): Promise<ILauncherApp> {
-    const instanceId = UUID.uuid4();
+  ): Promise<ILauncherApp | void> {
+    const instanceId = UUID.uuid4();    
     const serverUrlPromise = requestAPI<string>({
       method: 'POST',
       body: JSON.stringify({
@@ -21,34 +38,56 @@ export class LocalServerFactory implements IPanelFactory {
         instanceId
       })
     });
-    const widget = new IFrame({
-      sandbox: [
-        'allow-same-origin',
-        'allow-scripts',
-        'allow-downloads',
-        'allow-modals',
-        'allow-popups'
-      ]
-    });
-    const baseUrl = PageConfig.getBaseUrl();
-    widget.title.label = config.title;
-    widget.title.closable = true;
-    widget.disposed.connect(async () => {
-      await requestAPI<string>({
-        method: 'POST',
-        body: JSON.stringify({
-          method: 'terminate_resources',
-          id: config.id,
-          instanceId
-        })
-      });
-    });
-    const ready = new PromiseDelegate<void>();
 
+    var createNewWindow: boolean = false;
+    if (config.args) {
+      createNewWindow = (config.options as IDict)['createNewWindow'];  
+    }
+
+    var widget: IFrame | undefined;
+
+    if (!createNewWindow) {
+        widget = new IFrame({
+          sandbox: [
+            'allow-same-origin',
+            'allow-scripts',
+            'allow-downloads',
+            'allow-modals',
+            'allow-popups'
+          ]
+        });
+        widget.title.label = config.title;
+        widget.title.closable = true;
+        widget.disposed.connect(async () => {
+          await requestAPI<string>({
+            method: 'POST',
+            body: JSON.stringify({
+              method: 'terminate_resources',
+              id: config.id,
+              instanceId
+            })
+          });
+        });
+    } else {
+        showTemporaryPopup(config.title);
+    }
+    const baseUrl = PageConfig.getBaseUrl();
+    const ready = new PromiseDelegate<void>();
+    
     serverUrlPromise.then(url => {
-      widget.url = baseUrl + url;
+      if (createNewWindow) {
+        window.open(baseUrl + url, '_blank');
+      } else {
+        if (widget !== undefined) {
+          widget.url = baseUrl + url;
+        }
+      }
       ready.resolve();
     });
-    return { panel: widget, ready: ready.promise };
+    if (widget !== undefined) {
+        return { panel: widget, ready: ready.promise };
+    } else {
+        return;
+    }
   }
 }
