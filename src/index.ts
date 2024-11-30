@@ -76,8 +76,8 @@ async function activate(
         ) {
           skipMainAreaWidget = true;
         } else if (
-            config.type === 'local-server' &&
-            (config.options as IDict)['createNewWindow']
+          config.type === 'local-server' &&
+          (config.options as IDict)['createNewWindow']
         ) {
           skipMainAreaWidget = true;
         } else if (
