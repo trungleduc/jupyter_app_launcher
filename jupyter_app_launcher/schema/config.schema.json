@@ -41,6 +41,16 @@
     "catalog": {
       "type": "string"
     },
+    "options": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "array"
+        }
+      ]
+    },
     "args": {
       "anyOf": [
         {
