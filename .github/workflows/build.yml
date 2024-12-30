@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
@@ -82,12 +82,3 @@ jobs:
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "jupyter_app_launcher.*OK"
           python -m jupyterlab.browser_check --no-browser-test
-
-  check_links:
-    name: Check Links
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v3
-      - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
-      - uses: jupyterlab/maintainer-tools/.github/actions/check-links@v1

@@ -72,6 +72,10 @@ conda install -c conda-forge  jupyter_app_launcher
 
 ![Dynamic layout](./docs/source/images/url.gif)
 
+### Open VSCode Web inside JupyterLab
+
+See [code server example](./samples/code-server/README.md)
+
 ## Contributing
 
 See [Contributing](https://jupyter-app-launcher.readthedocs.io/en/latest/develop-install.html)
