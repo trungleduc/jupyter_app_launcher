@@ -1,7 +1,8 @@
 # [VSCODE web based](https://github.com/coder/code-server) with jupyter
 
 ## Install vscode
-> Run in jupyter terminal  
+
+> Run in jupyter terminal
 
 ```bash
 curl -fsSL https://code-server.dev/install.sh | sh
@@ -12,6 +13,7 @@ curl -fsSL https://code-server.dev/install.sh | sh
 > In the server config, you need to add the following lines
 
 **jupyter_lab_config.py**
+
 ```py
 from tornado import websocket
 websocket_max_message_size = 1048 * 1024 * 1024
