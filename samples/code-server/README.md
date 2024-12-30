@@ -10,7 +10,7 @@ curl -fsSL https://code-server.dev/install.sh | sh
 
 ## Setting up server parameters
 
-> In the server config, you need to add the following lines.  
+> In the server config, you need to add the following lines.
 > This is necessary because to run such applications, jupyter-server-proxy is used, which uses **\_default_max_message_size** directly from the **tornado.websocket** module, and not from the **c.LabApp.tornado_settings** configuration. [websocket.py#L52](https://github.com/jupyterhub/jupyter-server-proxy/blob/76a98c900605e31a9209e0897d3010d2c6057960/jupyter_server_proxy/websocket.py#L52)
 
 **jupyter_lab_config.py**
