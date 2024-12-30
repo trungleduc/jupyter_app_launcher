@@ -20,7 +20,7 @@ websocket_max_message_size = 1048 * 1024 * 1024
 # fix module
 setattr(websocket, "_default_max_message_size", websocket_max_message_size)
 # fix config
-c.NotebookApp.tornado_settings = {"websocket_max_message_size": websocket_max_message_size}
+c.LabApp.tornado_settings = {"websocket_max_message_size": websocket_max_message_size}
 ```
 
 ## Setting up jupyter_app_launcher with open in new TAB
