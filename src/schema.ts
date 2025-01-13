@@ -23,6 +23,11 @@ export interface ILauncherConfiguration {
     | 'jupyterlab-commands'
     | 'terminal';
   catalog?: string;
+  options?:
+    | {
+        [k: string]: any;
+      }
+    | any[];
   args?:
     | {
         [k: string]: any;
