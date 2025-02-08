@@ -13,7 +13,7 @@ export class TerminalFactory implements IPanelFactory<Terminal> {
     args: IDict
   ): Promise<ILauncherApp<Terminal>> {
     const cmd = config.source as string;
-    const name = config.title;
+    const name = config.title.replace(/\s+/g, '');
     const reuse = (config.args as IDict)?.reuse;
     const cwd = config.cwd;
     const { themeManager, app } = this.options;
