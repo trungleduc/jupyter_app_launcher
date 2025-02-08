@@ -1,6 +1,6 @@
 {
     "name": "jupyter_app_launcher",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "A JupyterLab extension.",
     "keywords": [
         "jupyter",
