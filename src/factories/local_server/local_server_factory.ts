@@ -39,12 +39,12 @@ export class LocalServerFactory implements IPanelFactory {
       })
     });
 
-    var createNewWindow: boolean = false;
+    let createNewWindow: boolean = false;
     if (config.args) {
       createNewWindow = (config.options as IDict)['createNewWindow'];
     }
 
-    var widget: IFrame | undefined;
+    let widget: IFrame | undefined;
 
     if (!createNewWindow) {
       widget = new IFrame({
