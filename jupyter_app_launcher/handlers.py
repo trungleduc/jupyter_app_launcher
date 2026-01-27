@@ -68,7 +68,7 @@ class JupyterAppLauncher(APIHandler):
             config_path.append(os.getcwd())
             app_launcher_path_env = getenv("JUPYTER_APP_LAUNCHER_PATH", None)
             if app_launcher_path_env:
-                config_path.append(app_launcher_path_env)
+                config_path.extend(app_launcher_path_env.split(":"))
 
             for path in config_path:
                 if not osp.exists(path):
