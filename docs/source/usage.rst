@@ -35,7 +35,7 @@ If under the `jupyter_app_launcher` directory of these paths, YAML files (`.yaml
   /home/***/mambaforge/envs/appdev/share/jupyter/jupyter_app_launcher/jp_app_launcher_my_app.yml
   /home/***/.local/share/jupyter/jupyter_app_launcher/jp_app_launcher_my_other_app.yml
 
-In addition to this behavior, `jupyter_app_launcher` also loads the YAML files with names starting with `jp_app_launcher` in the directory where JupyterLab was started, and also in the path defined by the ``JUPYTER_APP_LAUNCHER_PATH`` environment variable.
+In addition to this behavior, `jupyter_app_launcher` also loads the YAML files with names starting with `jp_app_launcher` in the directory where JupyterLab was started, and also in the path defined by the ``JUPYTER_APP_LAUNCHER_PATH`` environment variable, which can contain multiple paths separated by colon (`:`).
 
 .. note::
   This extension only reads the configuration file when JupyterLab starts. Users need to restart JupyterLab after changing the config file.
