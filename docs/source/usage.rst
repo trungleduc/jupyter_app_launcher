@@ -116,7 +116,7 @@ The common fields of the configurations are: ``title``, ``description``  ``icon`
 
 - ``title``: Title of the launcher entry.
 - ``description`` (Optional): Description of the launcher entry. It will be shown on mouse hover.
-- ``icon`` (Optional): Path to the icon of the launcher entry. If it is not defined, the initials of the title will be used as the icon.
+- ``icon`` (Optional): Path to the SVG icon of the launcher entry. For example: ``icon: /usr/share/icons/my_icon.svg``. If it is not defined, the initials of the title will be used as the icon. 
 - ``catalog`` (Optional): Catalog of the launcher entry, entry with the same catalog will be grouped in the same group in the launcher, If it is not defined, `Jupyter App` catalog will be used.
 
 Other fields will have different meanings depending on the entry type. In this section, we will detail these fields for each type of entry.
