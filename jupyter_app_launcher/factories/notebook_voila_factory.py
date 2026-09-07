@@ -1,5 +1,5 @@
-from subprocess import Popen, PIPE
 import time
+from subprocess import PIPE, Popen
 from typing import Dict, List, Tuple, Union
 
 from ..utils import get_free_port

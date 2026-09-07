@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 #
 # jupyter_app_launcher documentation build configuration file
 #
@@ -22,9 +21,11 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-import sys
 import os
-from os.path import dirname, join as pjoin
+import sys
+from os.path import dirname
+from os.path import join as pjoin
+
 from sphinx.util import logging
 
 extensions = [
