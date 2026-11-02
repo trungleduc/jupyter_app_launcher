@@ -1,4 +1,4 @@
-from subprocess import Popen, PIPE
+from subprocess import PIPE, Popen
 from typing import Dict, List, Tuple, Union
 
 from ..utils import check_url, get_free_port
