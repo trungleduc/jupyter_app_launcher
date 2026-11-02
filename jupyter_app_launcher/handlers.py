@@ -1,20 +1,18 @@
 import json
-from os import path as osp, getenv, listdir
 import os
+from os import getenv, listdir
+from os import path as osp
 from typing import Dict, List, Union
-from jupyter_server.base.handlers import APIHandler
-from jupyter_server.utils import url_path_join
+
 import tornado
 from jupyter_core.paths import jupyter_path
-
-from .factories.url_factory import URLFactory
+from jupyter_server.base.handlers import APIHandler
+from jupyter_server.utils import url_path_join
 
 from .factories.base_factory import BaseFactory
-
 from .factories.notebook_voila_factory import NotebookVoilaFactory
-
+from .factories.url_factory import URLFactory
 from .handler_factory_manager import HandlerFactoryManager
-
 from .utils import parse_config
 
 PATH_PREFIX = "jupyter_app_launcher"
