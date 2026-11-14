@@ -30,7 +30,8 @@ dependencies = [
     "jupyter_server>=2.0.1,<3",
     "pyyaml",
     "jupyter-server-proxy>=4.1.0,<5",
-    "jsonschema"
+    "jsonschema",
+    "requests"
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 
@@ -92,3 +93,6 @@ jupyter-app_launcher = "jupyter_app_launcher.script:build_lite"
 extend-exclude = [
     "*.ipynb",
 ]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
