@@ -2,6 +2,33 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.3
+
+([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.3.2...24adbe1a925bc863d2c24b37168c3ea6a41204f6))
+
+### Enhancements made
+
+- Allow JUPYTER_APP_LAUNCHER_PATH to contain multiple paths [#100](https://github.com/trungleduc/jupyter_app_launcher/pull/100) ([@dylex](https://github.com/dylex), [@trungleduc](https://github.com/trungleduc))
+
+### Maintenance and upkeep improvements
+
+- bump all [#102](https://github.com/trungleduc/jupyter_app_launcher/pull/102) ([@trungleduc](https://github.com/trungleduc))
+
+### Other merged PRs
+
+- :books: Update usage instructions for svg icon [#101](https://github.com/trungleduc/jupyter_app_launcher/pull/101) ([@luanabeckerdaluz](https://github.com/luanabeckerdaluz), [@trungleduc](https://github.com/trungleduc))
+
+### Contributors to this release
+
+The following people contributed discussions, new ideas, code and documentation contributions, and review.
+See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
+
+([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2025-02-08&to=2026-11-14&type=c))
+
+@dylex ([activity](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Adylex+updated%3A2025-02-08..2026-11-14&type=Issues)) | @luanabeckerdaluz ([activity](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Aluanabeckerdaluz+updated%3A2025-02-08..2026-11-14&type=Issues)) | @trungleduc ([activity](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2025-02-08..2026-11-14&type=Issues))
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.3.2
 
 ([Full Changelog](https://github.com/trungleduc/jupyter_app_launcher/compare/v0.3.1...688f3ca5eb6fd9fdc28f494dade61d21e016b6a2))
@@ -26,8 +53,6 @@
 ([GitHub contributors page for this release](https://github.com/trungleduc/jupyter_app_launcher/graphs/contributors?from=2024-11-02&to=2025-02-08&type=c))
 
 [@github-actions](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Agithub-actions+updated%3A2024-11-02..2025-02-08&type=Issues) | [@k-popov](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Ak-popov+updated%3A2024-11-02..2025-02-08&type=Issues) | [@MiXaiLL76](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3AMiXaiLL76+updated%3A2024-11-02..2025-02-08&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Apre-commit-ci+updated%3A2024-11-02..2025-02-08&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Atrungleduc%2Fjupyter_app_launcher+involves%3Atrungleduc+updated%3A2024-11-02..2025-02-08&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.3.1
 
