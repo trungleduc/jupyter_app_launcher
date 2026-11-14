@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Base Setup
-        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@b9d5c28489f8b460cef48868f303b97c20f8fe1b # v1.1.2
 
       - name: Install dependencies
         run: python -m pip install -U "jupyterlab>=4.0.0,<5"
@@ -47,7 +47,7 @@ jobs:
           pip uninstall -y "jupyter_app_launcher" jupyterlab
 
       - name: Upload extension packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: extension-artifacts
           path: dist/jupyter_app_launcher*
@@ -59,11 +59,11 @@ jobs:
 
     steps:
       - name: Install Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
-          python-version: '3.9'
+          python-version: '3.12'
           architecture: 'x64'
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: extension-artifacts
       - name: Install and Test
@@ -82,3 +82,61 @@ jobs:
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "jupyter_app_launcher.*OK"
           python -m jupyterlab.browser_check --no-browser-test
+
+  build-lite:
+    name: Build JupyterLite
+    needs: test_isolated
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
+      - name: Download extension package
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: extension-artifacts
+
+      - name: Install the dependencies
+        run: |
+          set -eux
+          python -m pip install "jupyterlite-core>=0.8.0,<0.9.0" "jupyterlite-pyodide-kernel>=0.8.0,<0.9.0" ipywidgets ipyflex ipyleaflet plotly ipyvuetify
+          python -m pip install jupyter_app_launcher*.whl
+
+      - name: Build the lite site
+        run: |
+          set -eux
+          mkdir -p ./lite/files/
+          cp ./samples/data.json ./samples/ticker2.json ./samples/beam.json ./lite/files/
+          jupyter app_launcher build ./binder/jupyter_app_launcher/ ./lite
+          cd lite
+          jupyter lite build --contents files --output-dir dist
+
+      - name: Upload artifact
+        id: upload-jupyterlite-artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ./lite/dist
+          retention-days: 30
+
+  deploy:
+    needs: build-lite
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
