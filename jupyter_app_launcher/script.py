@@ -1,7 +1,7 @@
-from argparse import ArgumentError
 import json
 import os
 import sys
+from argparse import ArgumentError
 
 from .utils import create_abs_path, parse_config
 
